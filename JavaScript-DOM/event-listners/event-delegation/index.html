@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            padding: 0; 
+            margin: 0;
+            list-style: none;
+        }
+
+        .container{
+            font-family: 'Times New Roman', Times, serif;
+            padding: 1rem;
+            border: 2px solid black;
+            width: fit-content;
+            text-align: center;
+            font-size: 1.25rem;
+
+            margin: 0 0 2rem 0;
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,40%);
+        }
+
+        .box{
+            position: relative;
+            margin: 0 auto;
+            display: inline;
+        }
+
+        .text{
+            text-align: left;
+            font-size: 1.55rem;
+        }
+
+        #header{
+            margin-bottom: 1rem;
+        }
+
+        .list-item{
+            padding: .5rem 0;
+            background-color: aliceblue;
+            width: 20rem;            
+            border: 1px solid black;
+        }
+
+        .button{
+            background-color: white;
+            border: 2px solid black;
+            font-size: 1.25rem;
+            padding: .45rem;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">Favourite Food</h1>
+        <ul class="list">
+            <li class="list-item li1">Pizza</li>
+            <li class="list-item li2">Burger</li>
+            <li class="list-item li3">Biryani</li>
+            <li class="list-item">Wraps</li>
+            <li class="list-item">Fried Chicken</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <button class="button">
+            Add More +
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

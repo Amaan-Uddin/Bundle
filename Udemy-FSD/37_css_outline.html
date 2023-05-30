@@ -1,0 +1,34 @@
+<!-- Let's talk outlines , which is basically a border around a border -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>outline</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            div {
+                font-size: 18pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .box {
+                width: 300px;
+                height: 300px;
+                border: 5px solid red;
+                outline: 5px solid black;
+                outline-offset: 10px;
+                /*
+                the outline property is used as an highlight with :hover,
+                it has no special use other than decoration.
+
+                the outline-offset property set's the GAP between the outline 
+                and the border or he element.
+                */
+            }
+        </style>
+
+        <div style="display: flex;justify-content: center;margin: 50px;">
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

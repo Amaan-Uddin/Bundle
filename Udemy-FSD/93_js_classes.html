@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes</title>
+</head>
+<body>  
+    <script>
+        // classes are mostly like objects but have a greater use in highlevel production
+
+        /*
+        syntax: class ClassName{...*any method/functions*}
+        */
+
+        class MyNewClass{
+            speak() {
+                console.log('Hello World!')
+            }
+        }
+
+        // now that we have created a class which has a function speak() inside of it , let's assign 
+        // this class to a new varible or particulary a class holder variable
+
+        const classHolder = new MyNewClass
+        classHolder.speak()
+        // so here the classHolder is able to access any and all functions within our class 
+        
+        // now let's try another different approach but this time with 'this' keyword
+
+        class MyClass {
+            setName(name){
+                this.name = name
+            }
+            // so what is happening here is that our 'this' keyword referes to the entire class since classes are objects
+            // so here we are assigning the "this.name" variable with the "name" argument
+            // now that we have assigned the "this.name" a value , this particular varible is now accesable anywhere within the scope of our class
+
+            speak(){
+                if(this.name === undefined) this.name = "Mohammed" // inserting a condition to make sure there is'nt any errors
+                console.log(`Hello World! my name is ${this.name}`)
+            }
+            // here we are using the 'this.name' inside of another function which is a part of the same class and scope
+
+        }
+
+        const newClassHolder = new MyClass
+        newClassHolder.setName("Amaan") // we have given "Amaan" as an argumnet and this name will be assigned to our 'this' variable
+        newClassHolder.speak()
+        // this time we won't be passing down an argument 
+        newClassHolder.setName()
+        newClassHolder.speak()
+
+    </script>
+</body>
+</html>

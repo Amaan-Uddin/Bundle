@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part2</title>
+</head>
+<body>
+    <!-- now let's change the content of a list using document.querySelector() -->
+    <b>original list</b>
+    <ol>
+        <li>this is one</li>
+        <li>this is two</li>
+        <li>this is three</li>
+    </ol>
+
+    <b>changed list</b>
+    <ol>
+        <li class="this-li">this is one</li>
+        <li class="this-li">this is two</li>
+        <li class="this-li">this is three</li>
+    </ol>
+
+    <script>
+        const obj = {"1":"one","2":"two","3":"three"}
+        // create a key:value pair object so as to insert the values of keys in our changed list through forEach()
+        const element = document.querySelectorAll(".this-li")
+        console.log(element) // will display a NodeList/ElementList containing all the elements which are of li type
+
+        // now to change the values of each li element we need to access each of those element using our forEach()
+
+        /*  element.forEach(node =>{
+             node.innerText = "this is changed!"
+            })
+        */
+       // the above code will change the innerText to this is changed for all elements with .this-li class
+
+
+        element.forEach((node,index)=>{
+            node.innerText = `this is ${obj[String(index+1)]}`
+        })
+        // here we are converting the index to a string so that it can be used as an object-access key
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <script>
+        // to set default values of a class we require the use of an constructor function
+        
+        class Person{
+            // so here instead of using our setName() function let's use our constructor function to initialize 
+            // object instance of a class during object creation using the 'new' keyword
+            constructor(name){
+                this.name = name
+            }
+
+            speak(){
+                console.log(`hello world! from constructor ${this.name}`)
+            }
+        }
+
+        // so now that we hae initialized our this.name varible inside of our class within a constructor function
+        // during each creation of our Person class we can specify the name/value of our this.name 
+
+        const classHolder = new Person('Amaan')
+        classHolder.speak()
+
+        // so what we did here is we created a new oject of our class and initialized the values of our this.name during it's creation as a default value
+        // in short we just set the vlaues to existing object properties
+
+        // if we want to we can even change the assignment of our this.name in our class by adding a new function
+        // which holds the value for 'this' and once that is done , the default value of this.name will not be under use
+
+        class NewPerson{
+            constructor(name){
+                this.name = name 
+            }
+
+            speak(){
+                console.log(`hello world! and this is a default name -> ${this.name}`)
+            }
+
+            setName(name){
+                this.name = name
+            }
+            // now once this function get's called or executed this.name will have a new value
+        }
+
+        const newClassHolder = new NewPerson("Amaan")
+        newClassHolder.speak() // will display name as Amaan
+        newClassHolder.setName("Mohd")
+        newClassHolder.speak() // will display name as Mohd
+    </script>
+</body>
+</html>

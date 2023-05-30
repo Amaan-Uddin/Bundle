@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <script>
+        /*
+        arrow functions are generally used in modern javascript and helps reduce the workload.
+        it is Quick, and efficient in some cases, cases where we do not require the scope of the 'this'
+        to be bounded within a particular object
+        */
+
+        // the old way of writing a function in javascript
+        // method 1
+        function greetings1(name){
+            console.log(`Hello world! How are you ${name}?`)
+        }
+
+        // method 2
+        const greetings2 = function(name){
+            console.log(`Good afternoon ${name}`)
+        }
+
+        // now let's write a function using the arrow function =>
+        // method 3
+        const greetings3 = (name) => {
+            console.log(`Good evening ${name}`)
+        }
+
+        // method 4 *this method is used to define a single line functions*
+        const greetings4 = (name) => `lorem ipsum ${name}`
+
+        // now let's call these functions
+        const name = prompt("What is your name?")
+        greetings1(name)
+        greetings2(name)
+        greetings3(name)
+        // greetings4(name)
+        console.log(greetings4(name))
+
+        // NOTE: since we did not give our greetings4() function a console.log() function inside it's scope
+        // and the only purpose of the function is to return a string with a given argument
+
+        /*
+            the key difference between a normal function and an arrow function is that in a normal function
+            the 'this' keyword is bounded to the scope of the function meaing that the function is an object 
+            with it's own set or code
+
+            whereas in an function defined using a arrow function the scope is global and the 'this' keyword 
+            is not set or limited to a specific bound or scope and is global
+
+            NOTE: the 'this' keyword inside of a standard function will refer to that as an object 
+            eg: function funName(parameter){
+                ...
+                this
+            }
+            here this refers to the entire local scope of the function
+
+            const funName2 = (parameter) => {
+                ...
+                this
+            } 
+            in here the 'this' is not bounded to the function and can refer to the entire global scope as 
+            an object
+        */
+
+    </script>
+</body>
+</html>

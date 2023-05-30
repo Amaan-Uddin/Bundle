@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <!-- 
+        let's select an element by their class first 
+        firstly, create 4 div elemet with the same class
+    -->
+    <div class="this-class">This is element 1</div>
+    <div class="this-class">This is element 2</div>
+    <div class="this-class">This is element 3</div>
+    <div class="this-class">This is element 4</div>
+
+    <!-- 
+        now let's access these div by their class
+    -->
+    <script>
+        const elems = document.querySelector(".this-class")
+        console.log(elems.innerText)
+        // this code segment right here will print out the text of the first div element 
+        // with the class "this-class" and will ignore the others
+
+        // now let's try and select all the elements having the class "this-class"
+        const elem = document.querySelectorAll(".this-class")
+        console.log(elem)
+        // this will return a NodeList with 'div.this-class' as it's elements
+        // a NodeList is simply an ElementList compising of elements with their significant class
+
+        elem.forEach((node,index)=>{
+            console.log(index,node.innerText)
+        })
+        // do this to display the index and value of each HTML element
+    </script>
+</body>
+</html>

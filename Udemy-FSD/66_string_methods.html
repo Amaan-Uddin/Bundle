@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+    <script>
+        let course = "JavaScript 101: coding for beginners";
+        // some of the popular string methods are 
+        // slice(),length(),search(),replace(str_1,str_2),toUpperCase(),substr(?from , size_of_string)
+        // trim(), gets rid of extra white spaces
+        // split(<string>) , this will split the entire string by the string passsed as argument
+        const len = course.length;
+        console.log(len);
+        console.log(course.slice(16,22));
+        console.log(course.search("coding"));
+        console.log(course.toUpperCase());
+        console.log(course.split(" "));
+        console.log(course.replace("coding","programming"));
+
+        console.log(course.substr(16 , course.slice(16,22).length));
+        
+        course = course.replace("coding","programming");
+        console.log(course);
+        // assign the course variable with the change you want to implement in it .
+    </script>
+</body>
+</html>

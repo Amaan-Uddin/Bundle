@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <script>
+        // it's the old looping method, one which is thought along side for loop
+        // while loops are conditional loops and require a condition and a variable(loop varible) which changes overtime so as to terminate the loop at one point
+        // if the loop isn't terminated then it becomes a infinite loop
+        
+        // syntax: 
+        /* 
+        while(condition){
+            execute this code if the condition is true
+        };
+        */ 
+
+        // let's write a code which would run infitely until the user guesses the correct name
+        while(true){
+            let name = prompt("Type in a name:");
+            if(name === "Amaan") break;
+            console.log("Wrong Name. Try again!");
+        }
+
+    </script>
+</body>
+</html>

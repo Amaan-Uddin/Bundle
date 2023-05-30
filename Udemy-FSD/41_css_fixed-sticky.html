@@ -1,0 +1,173 @@
+<!-- Fixed and sticky positioning -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fixed and Sticky Positioning</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+       <!-- 
+        A good example for the fixed positioning would be the header or navigation bar on some webpages,
+        when applied to an element it just remains static to a your screen.
+        --> 
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+            div {
+                font-size: 18pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .box {
+                border-bottom: 1px solid grey;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                display: flex;
+                padding: 15px 40px;
+                height: 40px;
+                align-items: center;
+                background-color: rgb(189, 182, 182);
+                opacity: 100%;
+            }
+            input[type="search"] {
+                border-radius: 15px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                justify-self: center;
+                width: 450px;
+                height: 31px;
+                border: 0.5px solid black;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 3px 12px;
+            }
+            .container {
+                display: flex;
+                margin-right: auto;
+                margin-left: auto;
+                /*this will place our container in the center of our box*/
+                padding: 0px 10px;
+                align-items: center;
+                width: 1160px;
+            }
+            div.container span {
+                justify-self: left;
+                font-weight: bold;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 34px;
+                /*margin-right: 30px;*/
+                display: flex;
+                /*margin-left: auto;*/
+                margin-right: auto;
+            }
+            .center {
+                margin-left: -73px;
+                margin-right: auto;
+            }
+            .empty {
+                height: 65px;
+            }
+            .para {
+                display: flex;
+                padding: 15px 40px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            #cent {
+                margin-left: auto;
+                margin-right: auto;
+                width: 1175px;
+                overflow: auto;
+            }
+
+            .sticky-box {
+                display: flex;
+                padding: 15px 40px;
+                position: relative;
+            }
+            .sticky-container{
+                background-color: red;
+                width: 100%;
+                height: 1000px;
+                border: 3px solid black;
+            }
+            .sticky-element {
+                position: sticky;
+                background-color: blue;
+                border-radius: 0px 0px 5px 5px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 27pt;
+                align-items: center;
+                height: 60px;
+                width: 100%;
+                top: 0px;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 12px;
+                
+            }
+        </style>
+        <div class="box">
+            <div class="container">
+                <span>
+                    NAV
+                </span>
+                <div class="center">
+                    <form action="" method="get">
+                        <input type="search" name="search-bar" placeholder="search..">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="empty"></div>
+        <div class="para">
+            <div id="cent">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo corrupti nostrum fugit alias ea! Voluptas deserunt architecto nesciunt? Veniam, accusamus vel veritatis doloremque perferendis cupiditate fugiat maxime sit quisquam omnis.</p>
+            </div>
+        </div>
+        <!-- 
+        the above is an example for fixed positioning and how it remains fixed to one part of the webpage/site 
+        -->
+        <!--
+        sticky is the same as fiexed but instead of staying at the same position it drags along 
+        as we scroll up or down.
+        -->
+        <div class="sticky-box">
+            <div class="sticky-container">
+                <div class="sticky-element">
+                    sticky
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

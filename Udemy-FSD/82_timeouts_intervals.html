@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeouts and Intervals</title>
+</head>
+<body>  
+    <script>
+        // we are already familiar with timeouts, example setTimeout
+        // a function which callbacks another function after a givent set of time
+        setTimeout(() => {
+            console.log("Timeout execution after 4 seconds");
+        },4000);
+
+        // intervals are fuction which act just like Timeout but a repeating 
+        // they callback a function after a set timeperiod and keep on repeating the same process over and over again
+
+        // setInterval(() => {
+        //    console.log("checking...");
+        // }, 1000);
+
+        // here the message will be displayed each second
+
+        // let's try and stop the interval after a certian limit has been reached
+        let count = 0;
+        let myInterval = setInterval(() => {
+            console.log("checking...");
+            count++;
+
+            if(count === 3){
+                clearInterval(myInterval);
+                console.log("Interval has stopped");
+            }
+        },1000);
+
+
+        // NOTE - even though the setTimeout function is read first by the browser it isn't displayed due to the delay
+        // but if the timeperiod where to be reduced to 2 seconds instead of 4 then our setTimeout function will display it's content first then it will resume the setInteval content
+
+    </script>
+</body>
+</html>

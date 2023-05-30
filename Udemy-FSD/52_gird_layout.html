@@ -1,0 +1,62 @@
+<!-- Let's look the newly page layout module , grid-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grid</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                /* display: flex; */
+                margin-right: auto;
+                margin-left: auto;
+                /* flex-basis: content; */
+                /* justify-content: center; */
+                /* width: 100%; */
+            }
+            .container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-column-gap: 1rem;
+                grid-row-gap: 1rem;
+                /*set how many columns or rows you want in your webpage ,
+                set the gap between these columns and rows*/
+            }
+            .container > .item {
+                border: 2px dashed red;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .item1,.item7 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+            .item2 {
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+            .item3 , .item4 ,.item6 {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+        </style>
+        <div class="box">
+            <div class="container">
+                <div class="item item1">Header</div>
+                <div class="item item2">Navigation</div>
+                <div class="item item3">Content1</div>
+                <div class="item item4">content2</div>
+                <div class="item item5">AD</div>
+                <div class="item item6">Content3</div>
+                <div class="item item7">Footer</div>
+            </div>
+        </div>
+        
+    </body>
+</html>

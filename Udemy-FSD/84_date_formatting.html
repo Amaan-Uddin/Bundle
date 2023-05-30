@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Formating in JS</title>
+</head>
+<body>
+    <script>
+        // in this section we are discussing ways of formating dates in JS
+
+        let date = new Date(2022,4,30);
+        console.log(date);
+        // this is one way
+
+        console.log(date.getFullYear());
+        console.log(date.getDate());
+
+        console.log(date.getDay());
+        // days start of with sunday being 0 and saturday being 6
+
+        console.log(date.getMonth());
+        // the months start of with 0 as january and 11 as december , just like the index of a list
+        // so the above code will print out 4 as the month representing "may"
+
+        // now there are 2 ways of getting the month and day to be dispalyed in the form of string/words
+        // this can be achived by creating a list or an object
+
+
+        // list of months on their supposed index
+        const months = [
+            "jan",
+            "feb",
+            "mar",
+            "apr",
+            "may",
+            "jun",
+            "jul",
+            "aug",
+            "sep",
+            "oct",
+            "nov",
+            "dec"
+        ];
+
+        // object of days with each number from 0-6 representig a day
+        const days = {
+            "0":"Sunday",
+            "1":"Monday",
+            "2":"Tuesday",
+            "3":"Wednesday",
+            "4":"Thursday",
+            "5":"Friday",
+            "6":"Saturday"
+        };
+
+        console.log(days[String(date.getDay())]);
+        console.log(months[String(date.getMonth())]);
+
+        // we've looked at few "get" methods , now let's checkout some of the "set" functions
+
+        date.setFullYear(2020);
+        console.log(date);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable scoping in JS:201</title>
+</head>
+<body>
+
+    <script>
+        // scoping is the way of identifying a variables accability in our program
+        // 2 types of scope - global scope and local scope
+        // global meaning they are accessed throughout our program except within our defined functions
+        // local meaning they are accessed within a particular function or a block
+
+        const myAge = 19;
+        function ageCalulator(age){
+            const yearBorn = 2022 - age;
+            console.log(`year born ${yearBorn}`);
+        }
+        if (myAge > 17){
+            console.log(`you are ${myAge} and eligible to vote.`);
+        } else {
+            console.log("not eligible");
+        }
+
+        // here 'myAge' is a global variable and can be passed to a function as an argument and be used 
+        // in other part's of the program like in the conditional clause
+
+        // 'yearBorn' on the other hand is a local variable and can be accessed within that particular function.
+
+        if (typeof(myAge) == "number"){
+            var greetings = "Hello World!";
+            console.log(greetings);
+        }
+    </script>
+</body>
+</html>

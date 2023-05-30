@@ -1,0 +1,34 @@
+<!-- Let's discuss about text shadow , the child of  box shadow -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Text-shadow</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            div {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 50pt;
+            }
+            .text {
+                /*text-shadow: x y blur color;*/
+                text-shadow: 
+                2px 2px 5px red,
+                -2px -2px 5px blue;
+                /* 
+                change the color of the text to be transparent
+                so that you'll get a nice blured 3d effect
+
+                text-shadow is the same as box-shadow but for text.
+                */
+            }
+        </style>
+
+        <div style="text-align: center;">
+            <div class="text">
+                Hello Wolrd!
+            </div>
+        </div>
+    </body>
+</html>

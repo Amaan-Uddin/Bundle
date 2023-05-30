@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        sometimes when you have 100s or even 1000s of lines of html code to execute 
+    your borwse will go through each and every line and execute them but sometimes there be occure
+    instances when your javascript might render and might look for a class or element 
+    in the DOM which does not even exist yet.
+     -->
+    <script>
+        window.onload = function(){
+            alert("page has been loaded");
+        }
+        // now the following code will be executed once the page is fully loaded
+    </script>
+</body>
+</html>

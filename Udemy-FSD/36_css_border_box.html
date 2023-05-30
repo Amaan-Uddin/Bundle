@@ -1,0 +1,55 @@
+<!-- Here we are going to be discussing about the difference between border-box and content box -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX model</title>
+    <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+</head>
+<body>
+    <style>
+        div {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18pt;
+        }
+        .box1 {
+            border: 5px solid red;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            box-sizing: content-box;
+        }
+        .box2 {
+            border: 5px solid red;
+            padding: 30px;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            box-sizing: border-box;
+            overflow: scroll;
+            /*
+            essentially what this does is it does not change it's magnitude 
+            and remains the same width and height as provided, this is useful 
+            especially when you're applying padding to your element and don't 
+            want the shape of the box to be hindered
+
+            in the given example our width is 300px and height is 300px, these values will be fixed.
+            now by specifying border-box and applying some padding and giving it some border,
+            we are limiting our inner content space from 300x300 to 230x230 and the remaining 70x70 
+            are used into creating a border of 5px and padding of 30px
+            
+            */
+        }
+    </style>
+
+    <!-- 
+        so let's take and example of content box and see the difference between it and a border-box
+    -->
+
+    <div class="box1"></div>
+    <div class="box2"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni non suscipit voluptatum doloribus, asperiores alias fugiat recusandae. Pariatur laudantium exercitationem molestias modi aperiam, neque sit eius saepe omnis, cumque quasi magnam quidem. Cupiditate exercitationem laborum, iusto quibusdam dolorum culpa temporibus qui dicta obcaecati! Aliquam laboriosam velit amet sint ratione cum aspernatur aliquid explicabo at incidunt consectetur magnam excepturi nulla illum deserunt odio quod perspiciatis neque, ea quam. Itaque, aut. Molestias recusandae cum consequuntur qui, neque non voluptatibus maiores enim ipsam deleniti expedita nemo voluptate mollitia vel, et repudiandae magnam beatae excepturi! Asperiores culpa quibusdam natus iure perspiciatis molestiae eos nulla. </div>
+</body>
+</html>

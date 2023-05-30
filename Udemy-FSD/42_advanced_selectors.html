@@ -1,0 +1,61 @@
+<!-- let's discuss some of the more important aspects of CSS-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced CSS operators</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+                
+            #parent > .box {
+                height: 30px;
+                border: 1px dashed blue;
+            }
+            /*so here the > operator is use to indicate the child of a perent element.
+            it is called the decendent selector.*/
+            #parent .box + .box {
+                background-color: red;
+            }
+            /* so here our + or adjacent operator is used to select every box other than 
+            the before the operator.*/
+
+            /*another wa to perform the same operation would be through the use of 
+            ~ operaor.*/
+            #parent .box ~ .box {
+                background-color :blueviolet;
+            }
+
+            /*NOTE: Make sure to keep 'specificity' in mind when dealing with any sort of CSS
+            projects or operations.
+            A clear example of specificity would be:
+
+            #parent > .box {
+                height: 30px;
+                border: 1px dashed blue;
+            }
+            #parent .box + .box {
+                background-color: red;
+            }
+            .box ~ .box {
+                background-color :blueviolet;
+            }
+
+            here the .box ~ .box operation would be completely ignored as it isn't specific as the
+            previous selectors.
+            */
+        </style>
+        <div id="parent">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="box"> hola si qumoi! </div>
+
+
+    </body>
+</html>

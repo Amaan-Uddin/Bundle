@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser</title>
+</head>
+<body>      
+    <script>
+        // gives access to an outer function scope
+        // 'closuer' is a term given to global variables which can be accessed within a function or a block of code
+        const personOneName = "Amaan Uddin";
+        function greetings(){
+            console.log(`Hello ${personOneName}, How are You!`);
+            const personTwoName = "Mohammed";
+        }
+        greetings();
+        // console.log(`${personTwoName} is the second person.`);
+
+        // so here 'personOneName' is a global variable and can be accessed within a function without passing it as an argument
+        // whereas 'personTwoName' is a local variable and is declared within a function and is only accessable within that fucntion only.
+
+        // some more examples
+        let arr = [2,3,14,5,4];
+        function bubbleSort(){
+            for(var i=0;i<arr.length;i++){
+                for(var j=0;j<(arr.length)-i-1;j++){
+                    if(arr[j] > arr[j+1]){
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var sortedArray = bubbleSort();    
+        console.log(sortedArray);
+
+        // here our sorting function does not take any argument, and during the function call 
+        // no argument/array was passed and the function was able returning a sorted array, 
+        // because the the array name is a "closure object" in this instance and is global to the entire program
+        // hence why we did not need to provide an arrgument for our array named "arr"
+
+        // NOTE- this fucntion will only sort an array whoes name is 'arr' without asking for an argument
+        // if the name of the array is not "arr" then we will have to pass down the array as an argument in our function call
+
+    </script>
+</body>
+</html>

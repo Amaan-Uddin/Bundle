@@ -1,0 +1,47 @@
+<!-- let's look at hhow we can merge two or more columns and rows -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>merging</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <h2>HTML 201:</h2>
+        <div>
+            In this Tutorial we'll be seeing how we could combine or merge two columns or precisely use the <span style="text-decoration: underline;"><b><strong>colspan</strong></b></span> and <span style = "text-decoration: underline;"><b><strong>rowspan</strong></b></span> attributes.
+        </div>
+        <br>
+        <div>
+            As we all know the creation of a table requires the use of the 
+            <ul>
+                <li><b>&lt;table&gt;&lt;/table&gt;</b> tags</li>
+                <li><b>&lt;tbody&gt;&lt;/tbody&gt;</b> nested/childer tags</li>
+                <li><b>&lt;tr&gt;&lt;/tr&gt;</b> nested/grand-childer row-tags</li>
+                <li><b>&lt;td&gt;&lt;/td&gt;</b> nested/great-grand-childer datacells tags</li>
+            </ul>
+        </div>
+
+        <span style="text-decoration: underline;"><h3> Let's Create A Table: </h3></span>
+        <table border="1" width="100%">
+            <tbody>
+                <tr>
+                    <!-- let's span the first column to merge with the first second and third column -->
+                    <td colspan="3" height="50">1</td>
+                </tr>
+                <tr>
+                    <!-- Let's join the the second column of the second row with the third column of the second row -->
+                    <td rowspan="3">1</td>
+                    <td colspan="3">2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            And that's how you create and alter a table and it's rows and columns.
+        </div>
+    </body>
+</html>

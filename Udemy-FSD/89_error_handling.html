@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+        /* the try and catch and finally is not commonly used in JS, it's more of a python thing.
+        but none the less it is quite helpful
+        think of it just like "try" and "except"*/
+
+        try{
+            functionWhichDoesNotExist();
+        } catch(error){
+            console.warn("Hello Lads , there's an ERROR!!")
+        }
+
+        // so what's happening here is that our "block" tries to execute a function which isn't defined
+        // and sends the controle flow to catch witch later on executes a console.warn()
+        console.log("hello world")
+
+
+        // now if we want to we can display our own error by giving it a name by using "throw" keyword
+
+        try {
+            throw "INSERT Error Name...";
+            console.log("hello there m howdy??????")
+        } catch(error){
+            console.warn("caught the error")
+            console.log(error)
+        }
+        // now keep in mind that when we give a console.log() statement inside of our "try" function, and 
+        // and if any events before that console.log() lead to an error , that console.log() will not be displayed
+        // in our console.
+
+        // also keep in mind that our throw function throws an error named by the user to our catch block
+
+        // the finally{} is basically what is executed regardless of whether try or catch
+
+        let num = 10
+        try {
+            // throw "const error!"
+            num*=10
+        } catch(error){
+            console.warn("ERROR LOG:",error)
+            num-=10
+        }finally{
+            if(!num) {
+                console.log("catch was executed")
+                console.log(num)
+            } else{
+                console.log("try was executed")
+                console.log(num)
+            }
+        }
+
+        // just un-comment the throw part of the program to get a different result
+
+    </script>
+</body>
+</html>

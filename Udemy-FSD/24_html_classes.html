@@ -1,0 +1,73 @@
+<!-- Now we are going to discuss CLASS in html-->
+<!-- As we all know CLASS is a reusable piece of code which can be used by specifing it in a html element -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Classes in html</title>
+    </head>
+    <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    <style>
+        div {
+            color: black;
+            font-style: normal;
+            text-transform: uppercase;
+        }
+    </style>
+
+    <body>
+        <h2>HTML 201:</h2>
+        <div> 
+            We have learned how we can use the style element in the head of the html to alter or to apply CSS to our Elements.
+            <div>
+                Now let's use some CLASS so we can resue the code in different elements or in our case different &lt;div&gt; elements.
+            </div> 
+        </div>
+
+        <!-- Create a style element with a class -->
+        <style>
+            .FirstClass {
+                color: white;
+                background-color: black;
+                font-style: italic;
+                font-size: 20px;
+                text-transform: capitalize;
+                padding: 2px;
+            }
+
+            .Lower {
+                text-transform: lowercase;
+            }
+
+            .SecondClass {
+                color: maroon;
+                background-color: mintcream;
+                font-family: Arial, Helvetica, sans-serif;
+                text-shadow: black;
+                padding: 2px;
+                border: 1px solid black;
+            }
+
+            #htmlID {
+                border: 10px solid red;
+            }
+        </style>
+
+        <!-- We just created 2 classes which can be used multiple times throughout our program -->
+        <h3><u>let's Create some Lorem Ipsum:</u></h3>
+
+        <div class="FirstClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati vel aliquid neque. Illum, ex facere nesciunt corrupti neque totam voluptatem, iusto necessitatibus inventore magnam eius error ad nam? Assumenda!</div>
+        &nbsp;
+        <div class="FirstClass Lower" id="htmlID">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati vel aliquid neque. Illum, ex facere nesciunt corrupti neque totam voluptatem, iusto necessitatibus inventore magnam eius error ad nam? Assumenda!</div>
+        &nbsp;
+        <div class="SecondClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati vel aliquid neque. Illum, ex facere nesciunt corrupti neque totam voluptatem, iusto necessitatibus inventore magnam eius error ad nam? Assumenda!</div>
+        &nbsp;
+        <div id="htmlID">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati vel aliquid neque. Illum, ex facere nesciunt corrupti neque totam voluptatem, iusto necessitatibus inventore magnam eius error ad nam? Assumenda!</div>
+        <!-- We just created an ID here and apply this to our "id" attribute. -->
+        &nbsp;
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati vel aliquid neque. Illum, ex facere nesciunt corrupti neque totam voluptatem, iusto necessitatibus inventore magnam eius error ad nam? Assumenda!</div>
+        &nbsp;
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa obcaecati vel aliquid neque. Illum, ex facere nesciunt corrupti neque totam voluptatem, iusto necessitatibus inventore magnam eius error ad nam? Assumenda!</div>
+        &nbsp;
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back function</title>
+</head>
+<body>
+    <script>
+        // a callback function is simply a functions which executes another function 
+        // OR
+        // a fucntion passed down as an argument to another function
+
+        // for this "callback" example we'll be using a predefined function in javascript
+
+
+        function greetAgain(){
+            console.log("function greet executed after 3s");
+        }
+
+        console.log("Execute after 2.5 seconds");
+        setTimeout(function() {
+            console.log("Hello world after 2.5s");
+        },2500);
+        // syntax:
+        // setTimeout({<unction>,<time_in_millisecond>);
+
+        // another way of writing the same code would be 
+        setTimeout(() => {
+            console.log("Hello world again after 3s");
+            greetAgain();
+            // calling another function within a function which is an argument of another function
+        },3000);
+
+        // this line of code is at the vary bottom of the script tag but is displayed as the 2 setTimeout functions are
+        // read by the browser but are not displayed as they have a timelimit to reach before executing the function
+        console.log("code to be executed after 2 setTimeout(s)")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration</title>
+</head>
+<body>
+    <script>
+        // basic iteration through an array is through javascript
+        const arr = ["one", "two", "three", "four"];
+        for(let i = 0 ; i < arr.length ; i++){
+            console.log(i , arr[i]);
+        }
+        // the above given code snippet is old-school way of iterating through an array
+
+        // in modern javascript we use a function called forEach()
+        // forEach() can be of 3 types, arrow fucntion, inner function, inline-function
+        // we'll be using the arrow function here 
+        // syntax : array.forEach((element,index,array) => {....});
+        arr.forEach((num , index) => {
+            console.log(index,num)
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Portfolio</title>
+
+    <!-- scroll reveal file -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Portf<span>olio</span></a>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="#home"class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about"class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#services"class="nav-link">Serivce</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio"class="nav-link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact"class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <i class="uil uil-moon toggle-btn"></i>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="showcase-area" id="home">
+            <div class="container">
+                <div class="showcase-info">
+                    <h3 class="sub-heading">Product Designer</h3>
+                    <h1 class="heading">Amaan Uddin</h1>
+                    <p class="text">A freelance developer. Let's work together</p>
+                    <div class="cta">
+                        <a href="mailto:mohdamaanuddin100@gmail.com" class="btn">Contact Me</a>
+                        <a href="#" class="btn secondary-btn">Download CV</a> 
+                        <!-- we can declare an 'download' attribute in our Download CV element 
+                        this allows the user to download our CV directly through our web page-->
+                    </div>
+                </div>
+                <div class="showcase-image">
+                    <img src="" class="person" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <img src="icons\icon1.png" alt="" class="icon">
+                        <h3>User Research</h3>
+                    </div>
+                    <div class="about-card">
+                        <img src="icons\icon2.png" alt="" class="icon">
+                        <h3>Visual Design</h3>
+                    </div>
+                    <div class="about-card">
+                        <img src="icons\icon3.png" alt="" class="icon">
+                        <h3>User Testing</h3>
+                    </div>
+                    <div class="about-card">
+                        <img src="icons\icon4.png" alt="" class="icon">
+                        <h3>Prototyping</h3>
+                    </div>
+
+                </div>
+                <div class="about-info">
+                    <h3 class="sub-heading">About me</h3>
+                    <h1 class="heading">Better deasign <br> better experience</h1>
+                    <p class="text">A passionate freelance web developer with intucive designs and
+                        optimal UI/UX. My work has cotributed in the success of many of my lancers
+                        and have helped them in achieving their desired website in no time. 
+                    </p>
+                    <div class="cta">
+                        <a href="mailto:mohdamaanuddin100@gmail.com" class="btn">Contact Me</a>
+                        <a href="#" class="btn secondary-btn">Download CV</a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section">
+            <div class="container">
+                <div class="skills-box">
+                    <div class="box-heading">
+                        <div class="sub-heading">My skills</div>
+                        <div class="heading">Let me help you</div>
+                        <div class="box-desc">
+                            <p class="text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, cupiditate accusamus, numquam consectetur mollitia saepe iste quibusdam itaque laborum error assumenda quod sit quia iusto perspiciatis impedit molestiae aperiam eligendi.
+                            </p>
+                            <a href="#" class="hire btn">Hire me</a>
+                        </div>
+                    </div>
+                    <div class="skills-wrap">
+                        <div class="skill">
+                            <div class="sk-progress">
+                                <svg>
+                                    <circle cx="75" cy="75" r="68" />
+                                    <!-- the reson behind giving the x and y axis of the circle as 75 is because the total width of the sk.progress element is 150px ,so half of that is 75-->
+                                </svg>
+                                <h2 class="counter">
+                                    <span data-target="89">0</span>%
+                                </h2>
+                            </div>
+                            <div class="sk-title">HTML</div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="sk-progress">
+                                <svg>
+                                    <circle cx="75" cy="75" r="68" />
+                                </svg>
+                                <h2 class="counter">
+                                    <span data-target="68">0</span>%
+                                </h2>
+                            </div>
+                            <div class="sk-title">CSS</div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="sk-progress">
+                                <svg>
+                                    <circle cx="75" cy="75" r="68" />
+                                </svg>
+                                <h2 class="counter">
+                                    <span data-target="82">0</span>%
+                                </h2>
+                            </div>
+                            <div class="sk-title">JavaScript</div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="sk-progress">
+                                <svg>
+                                    <circle cx="75" cy="75" r="68" />
+                                </svg>
+                                <h2 class="counter">
+                                    <span data-target="55">0</span>%
+                                </h2>
+                            </div>
+                            <div class="sk-title">UI Design</div>
+                        </div>
+                    <!-- we are specigyin the data-target a the percentage of each skill  so as to access it in JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="services-info">
+                    <h3 class="sub-heading">My services</h3>
+                    <h1 class="heading">Things I may do for my client</h1>
+                    <p class="text">
+                        From offering in-depth user research, to helping with design and testing, 
+                        I can help bring your product to life.
+                    </p>
+                    <div class="milestone">
+                        <div class="ml">
+                            <h2 class="number"><span data-target="11">0</span>+</h2>
+                            <h5>Years</h5>
+                        </div>
+                        <div class="ml">
+                            <h2 class="number"><span data-target="79">0</span>+</h2>
+                            <h5>Projects</h5>
+                        </div>
+                        <div class="ml">
+                            <h2 class="number"><span data-target="95">0</span>+</h2>
+                            <h5>Clients</h5>
+                        </div>
+                    </div>
+                    <div class="cta">
+                        <a href="#" class="btn">Hire me</a>
+                        <a href="#" class="btn secondary-btn">Download CV</a>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Brand Identity</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maxime dolorem ad blanditiis accusamus consequatur vero corrupti doloribus minima explicabo.
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Explore More</a>
+                    </div>
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Product Design</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maxime dolorem ad blanditiis accusamus consequatur vero corrupti doloribus minima explicabo.
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Explore More</a>
+                    </div>
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>Integration Design</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maxime dolorem ad blanditiis accusamus consequatur vero corrupti doloribus minima explicabo.
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Explore More</a>
+                    </div>
+                    <div class="srv-card">
+                        <div class="card-desc">
+                            <h3>App Design</h3>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maxime dolorem ad blanditiis accusamus consequatur vero corrupti doloribus minima explicabo.
+                            </p>
+                        </div>
+                        <a href="#" class="btn secondary-btn">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio section" id="portfolio">
+            <div class="modal">
+                <div class="modal-overlay"></div>
+                <div class="slider-wrap">
+                    <div class="prev-btn navigation">
+                        <i class="uil uil-angle-left-b"></i>
+                    </div>
+                    <div class="images">
+                        <img class="showImage" src="images\img1.jpg" alt="show image">
+                        <img src="images\img2.jpg" alt="show image">
+                        <img src="images\img3.jpg" alt="show image">
+                        <img src="images\img4.jpg" alt="show image">
+                        <img src="images\img5.jpg" alt="show image">
+                        <img src="images\img6.jpg" alt="show image">
+                    </div>
+                    <div class="next-btn navigation">
+                        <i class="uil uil-angle-right-b"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="portfolio-header">
+                    <div class="portfolio-title">
+                        <h3 class="sub-heading">Portfolio</h3>
+                        <h1 class="heading">Latest Projects</h2>
+                    </div>
+                    <div class="filter-btns">
+                        <button class="filter-btn" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter=".product">Product</button>
+                        <button class="filter-btn" data-filter=".inter">Interacting</button>
+                        <button class="filter-btn" data-filter=".web">Web App</button>
+                    </div>
+                </div>
+                <div class="portfolio-gallery">
+                    <div class=" mix prt-card inter">
+                        <div class="prt-image">
+                            <img src="C:\Users\user\Desktop\Portifolio\images\img1.jpg" alt="show image">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3>Olido Interaction</h3>
+                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                        </div>
+                    </div>
+                    <div class="mix prt-card product">
+                        <div class="prt-image">
+                            <img src="C:\Users\user\Desktop\Portifolio\images\img2.jpg" alt="show image">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3>Jenny Product design</h3>
+                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                        </div>
+                    </div>
+                    <div class="mix prt-card web">
+                        <div class="prt-image">
+                            <img src="C:\Users\user\Desktop\Portifolio\images\img3.jpg" alt="show image">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3>Meta Web design</h3>
+                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                        </div>
+                    </div>
+                    <div class="mix prt-card web">
+                        <div class="prt-image">
+                            <img src="C:\Users\user\Desktop\Portifolio\images\img4.jpg" alt="show image">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3>TwitUp web design</h3>
+                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                        </div>
+                    </div>
+                    <div class="mix prt-card inter">
+                        <div class="prt-image">
+                            <img src="C:\Users\user\Desktop\Portifolio\images\img5.jpg" alt="show image">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3>Markus Interaction</h3>
+                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                        </div>
+                    </div>
+                    <div class="mix prt-card web">
+                        <div class="prt-image">
+                            <img src="C:\Users\user\Desktop\Portifolio\images\img6.jpg" alt="show image">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: .15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="prt-desc">
+                            <h3>Demag web design</h3>
+                            <a href="#" class="btn secondary-btn sm">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section-background"></div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <img src="images\testi2.png" alt="show client">
+                                <div class="client-info">
+                                    <h4>Yung Jacob Williams</h4>
+                                    <h5>Executive Officer <a href="#">@ABEnergy</a></h5>
+                                </div>
+                            </div>
+                            <q class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aspernatur inventore accusantium consequatur nihil. Repellendus accusantium nisi officia molestias rem rerum tempora nemo vero! Quidem ratione placeat voluptas corporis quod?
+                            </q>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <img src="images\testi2.png" alt="show client">
+                                <div class="client-info">
+                                    <h4>Dametrius demarcus da 3rd</h4>
+                                    <h5>CEO of <a href="#">@Eco_focus</a></h5>
+                                </div>
+                            </div>
+                            <q class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aspernatur inventore accusantium consequatur nihil. Repellendus accusantium nisi officia molestias rem rerum tempora nemo vero! Quidem ratione placeat voluptas corporis quod?
+                            </q>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client">
+                                <img src="images\testi3.png" alt="show client">
+                                <div class="client-info">
+                                    <h4>Willy white boy</h4>
+                                    <h5>Director of <a href="#">@KKkorn_feild</a></h5>
+                                </div>
+                            </div>
+                            <q class="text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aspernatur inventore accusantium consequatur nihil. Repellendus accusantium nisi officia molestias rem rerum tempora nemo vero! Quidem ratione placeat voluptas corporis quod?
+                            </q>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="testimonials-title">
+                    <h3 class="sub-heading">Testmonial</h3>
+                    <h1 class="heading">Hear from my happy clients</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact-info">
+                    <h3 class="sub-heading">Contact me</h3>
+                    <h1 class="heading">Let's work together</h1>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus placeat culpa nisi quaerat nihil. Quisquam id et natus deleniti exercitationem?
+                    </p>
+                    <a href="mailto:mohdamaanuddin100@gmail.com" class="mail">mohdamaanuddin100@gmail.com <i class="uil uil-arrow-right"></i> </a>
+                </div>
+
+                <form action="index.html" class="contact-form">
+                    <h3>Send me a message</h3>
+                    <input type="text" class="form-input" placeholder="Your name" required>
+                    <input type="email" class="form-input" placeholder="Your email" required>
+                    <textarea placeholder="Project Details" class="form-input" required></textarea>
+                    <input type="submit" value="Send" class="btn">
+                </form>
+            </div>
+        </section>
+
+        <section class="subscription section">
+            <div class="container">
+                <img src="images\map.png" alt="show map" class="map">
+                <div class="sub-box">
+                    <div class="sub-info">
+                        <h3 class="sub-heading">Newsletter</h3>
+                        <h1 class="heading">Get news about my projects</h1>
+                        <p class="text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error hic nihil debitis sapiente cumque voluptates minus eum ducimus!
+                        </p>
+                    </div>
+                    <form action="index.html">
+                        <input type="email" placeholder="Email" class="form-input" required>
+                        <input type="submit" value="Subscribe" class="btn">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <a href="#" class="logo">Portf<span>olio</span></a>
+                <p class="text">&copy; Copyright 2022. All rights reserved</p>
+                <ul class="social-media">
+                    <li>
+                        <a href="#" class="social-link">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <i class="uil uil-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link">
+                            <i class="uil uil-dribbble"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="mixitup.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

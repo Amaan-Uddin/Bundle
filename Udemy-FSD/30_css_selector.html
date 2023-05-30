@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Selector</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            div {
+                font-weight: 100;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 13pt;
+                text-transform: capitalize;
+            }
+            kbd {
+                border-radius: 3px;
+                box-shadow: none;
+                background-color: rgb(208, 197, 197);
+                border: 1px solid black;
+                display: inline-block;
+                font-weight: 700;
+                line-height: 1.2;
+                padding: 2px 4px;
+                text-transform: none;
+            }
+            .linkCSS {
+                color: black;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-decoration: none;
+            }
+            .linkCSS:hover {
+                color :blue;
+                text-decoration: underline blue;
+            }
+            .linkCSS:active {
+                color : grey;
+                text-decoration: underline grey;
+            }
+            
+        </style>
+        <h1>CSS 101:</h1>
+        <div>
+            In this section let's discuss about our new chapter CSS 101.
+        </div>
+        <br>
+        <div>
+            the <span style="font-weight: bold; text-decoration: underline;">Syntax</span> for CSS is quite simple , the key elements are <span style="font-weight: bold;">selector,property</span> and <span style="font-weight: bold;">value</span>.
+        </div>
+        <br>
+        <div>
+            there are 3 ways for writing CSS:
+            <ul>
+                <li><span style="font-weight: bold; text-decoration: underline;">inline</span>, using the style attribute in an HTML element</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">internal</span>, using the <kbd>&lt;style&gt;</kbd> element</li>
+                <li><span style="font-weight: bold; text-decoration: underline;">exporting</span>, through importing a <span style="font-weight: bold;">.CSS</span> file.</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <strong style="line-height: 2;">syntax</strong>:
+            <div>
+                <span style="font-weight: bold;">
+                    <kbd>
+                        Selector { Property : Value; }
+                    </kbd>
+                </span>
+            </div>
+        </div>
+        <br>
+        <div>
+            Another way to apply CSS would be through the use of <b>Element Selector</b> or by specifing the <b>Element</b>.
+            <div>
+                <strong style="line-height: 2;">syntax</strong>:
+                <div>
+                    <kbd style="border-radius: 5px;line-height: 1.5;">
+                        &lt;style&gt;<br>
+                        &nbsp;div {
+                                border : 1px solid black;
+                            }<br>
+                        &lt;/style&gt;
+                    </kbd>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+            Let's head to our next way of applying CSS and that is through <b>Classes</b>
+            <div>
+                <strong style="line-height: 2;">syntax</strong>:
+                <div>
+                    <kbd style="border-radius: 5px;line-height: 1.5;">
+                        &lt;style&gt;<br>
+                        &nbsp;.anyClass {
+                                border : 1px solid black;
+                            }<br>
+                        &lt;/style&gt;
+                    </kbd>
+                    <br>
+                    <br>
+                    <kbd style="border-radius: 5px;line-height: 1.5;">
+                        &lt;div class="anyClass"&gt;<br>
+                        &nbsp;&nbsp;Hello Wolrd!<br>
+                        &lt;/div&gt;
+                    </kbd>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style='text-align: center;'>
+            <div style="border: 1px solid black;border-radius: 5px; text-align: center; line-height: 1.5;display: inline-block;padding: 2px 4px;">
+                <span style="font-weight: bold;">Remember</span> : you can also specify multiple classes in the <b>class</b> attribute.<br> keep in mind that you can also specify the element <b>AND</b> it's Class to Target a specific Element.
+            </div>
+            <br>
+            <br>
+            <div style="border: 1px solid black;border-radius: 5px; text-align: center; line-height: 1.5;display: inline-block;padding: 2px 4px; text-transform: none;">
+                <span style="font-weight: bold;">Example</span> : h1.anyClass , div.anyClass etc.
+            </div>
+        </div>
+        <br>
+        <div>
+            We can also apply CSS with the use of the <span style="font-weight: bold;text-transform: lowercase;">id</span> attribute.
+            <div>
+                <strong style="line-height: 2;">syntax</strong>:
+                <div>
+                    <kbd style="border-radius: 5px;line-height: 1.5;">
+                        &lt;style&gt;<br>
+                        &nbsp;#anyID {
+                                border : 1px solid black;
+                            }<br>
+                        &lt;/style&gt;
+                    </kbd>
+                    <br>
+                    <br>
+                    <kbd style="border-radius: 5px;line-height: 1.5;">
+                        &lt;div id="anyClass"&gt;<br>
+                        &nbsp;&nbsp;Hello Wolrd!<br>
+                        &lt;/div&gt;
+                    </kbd>
+                </div>
+            </div>
+            <br>
+            It works similer to our <b>Class</b> selectors but the only difference here is that it should be unique to each element.
+        </div>
+        <br>
+        <div style='text-align: center;'>
+            <div style="border: 1px solid black;border-radius: 5px; text-align: center; line-height: 1.5;display: inline-block;padding: 2px 4px;">
+                <span style="font-weight: bold;">Remember</span> : you should only have 1 <b>id</b> for each individual element.
+            </div>
+        </div>
+        <br>
+        <div>
+            let's discuss about applying CSS to <b>nested</b> elements.
+            <br>
+            <div>
+                <span style="font-weight: bold;line-height: 2;">Example code:</span>
+                <div>
+                    <kbd style="border-radius: 10px;line-height: 1.3;">
+                        &lt;div&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit&lt;/i&gt;. Ratione itaque iste sequi est harum nisi cum possimus.<br> &nbsp;&nbsp;&nbsp; Quibusdam ullam nam, facere harum laboriosam ducimus velit inventore nemo numquam, quasi et.<br>
+                        &nbsp;&nbsp;&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&lt;br&gt;<br>
+                        &nbsp;&nbsp;&lt;i&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;italics font<br>
+                        &nbsp;&nbsp;&lt;/i&gt;<br>
+                        &lt;div&gt;
+                    </kbd>
+                </div>
+            </div>
+            <br>
+            <div>
+                Now imagine a scenario where you need to change the color of a specific <kbd>&lt;i&gt;</kbd> tag,<br>You can obviously add a <b>Class</b> for it or an <b>Id</b> but it's too much time consuming.
+            </div>
+            <br>
+            <div>
+                To prevent this we can specify the <b>Nested</b> element in our CSS style sheet.
+            </div>
+            <br>
+            <kbd>
+                &lt;style&gt;<br>
+                &nbsp;&nbsp; div p i {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color : blue;&nbsp;&nbsp;<br>
+                &nbsp;&nbsp;&nbsp;}<br>
+                &lt;/style&gt;
+            </kbd>
+            <br>
+            <br>
+            <div>
+                by doing this you're targeting a specific element to apply your CSS to.
+            </div>
+            <span style="font-weight: bold;line-height: 1.7;">Result:</span>
+            <br>
+            <kbd style="border-radius: 7px;line-height: 1.3;padding: 5px;">
+                <span style="font-style: italic;color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>. Ratione itaque iste sequi est harum nisi cum possimus.<br>Quibusdam ullam nam, facere harum laboriosam ducimus velit inventore nemo numquam, quasi et.<br>
+                <br>
+                <i>italics font</i>
+            </kbd>
+            <br>
+            <br>
+            <div>
+                as you can see it did not change the color of the other <kbd>&lt;i&gt;</kbd> element.
+            </div>
+        </div>
+        <br>
+        <div style='text-align: center;'>
+            <div style="border: 1px solid black;border-radius: 5px; text-align: center; line-height: 1.5;display: inline-block;padding: 2px 4px;">
+                <span style="font-weight: bold;">Remember</span> : To specify the order of the nested element correctly.
+            </div>
+        </div>
+        <br>
+        <div>
+            let's dive into some pseudo-selectors and let's apply some CSS with it.
+            <br>
+            <br>
+            <div>
+                pseudo-selectors work in various ways , let's use some on a link.
+                <br>
+                <kbd style="border-radius: 8px;">
+                    &lt;div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. &lt;a href="https://youtube.com"&gt;Dicta&lt;/a&gt;, debitis!<br>
+                    &lt;/div&gt;
+                </kbd>
+                <br>
+                <br>
+                <span style="font-weight: bold;line-height: 1.5;">Result:</span>
+                <br>
+                <kbd>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="https://youtube.com">Dicta</a>, debitis!<br>
+                </kbd>
+                <br>
+                <br>
+                <div>
+                    Now let's try and change the color of the our link and also make it so that it changes when the pointer hovers over it and when we press and hold the link.
+                    <br>
+                    <kbd style="border-radius: 8px;">
+                        &lt;style&gt;<br>
+                        &nbsp;&nbsp;&nbsp;a {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color : black;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-family : Georgia, 'Times New Roman', Times, serif;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;a:hover {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color : blue;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;a:active {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color : grey;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        
+                        &lt;/style&gt;
+                    </kbd>
+                </div>
+                <br>
+                <div>
+                    <kbd style="border-radius: 8px;">
+                        &lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. &lt;a href="https://youtube.com"&gt;Dicta&lt;/a&gt;, debitis!<br>
+                        &lt;/div&gt;
+                    </kbd>
+                </div>
+                <br>
+                <div>
+                    <span style="font-weight: bold;line-height: 1.5;">Result:</span>
+                    <div>
+                        <kbd>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. <a class="linkCSS" href="https://youtube.com">Dicta</a>, debitis!<br>
+                        </kbd>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                now when you hover over the link it changes it's color and when selected it changes it to grey.
+            </div>
+        </div>
+    </body>
+</html>

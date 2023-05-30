@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100;200;400;600;800&display=swap');
+
+/* ------------------presets------------------ */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+/* ------------------main--------------------- */
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 2.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    row-gap: 2rem;
+
+    background-color: transparent;
+}
+
+.modal{
+    display: flex;
+    padding: 1rem;
+    gap: .75rem;
+    box-shadow: 0 2px 15px rgba(98, 97, 97, 0.12);
+    background-color: rgba(255, 255, 255, 0.826);
+    z-index: 2;
+
+    opacity: 0;
+    transform: translateY(-500%);
+    transition: .7s ease-in-out; 
+}
+
+button{
+    cursor: pointer;
+    border: 0;
+}
+
+.button{
+    padding: .65rem .85rem;
+    font-size: 1rem;
+    box-shadow: 0 2px 15px rgba(203, 203, 203, 0.5);
+    background-color: white;
+}
+
+.close{
+    border: 0px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.overlay{
+    position: absolute;
+    background-color: rgba(50, 50, 50, 0.165);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: .7s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

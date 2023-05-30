@@ -1,0 +1,125 @@
+<!-- let's discuss about different transform methods/fucntions and their syntax -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transform</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                margin: 7rem auto;
+            }
+            .box {
+                border: 2px solid black;
+                width: 300px;
+                height: 300px;
+                position: relative;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 2rem;
+                padding: 118 100px 100px 98px;
+
+            }
+            .box2 {
+                border: 2px dashed red;
+                width: 300px;
+                height: 300px;
+                box-sizing: border-box;
+                /* position: relative; <-- do not un-comment this as it will not show case the black box
+                as our red-dashed box entire block will be above the black box*/ 
+            }
+
+            #translate {
+                /* transform: translate(x-axis,y-axis); */
+                transform: translate(0px , 0px);
+                transition: 4s ease-in;
+                /*moves the object at x , y axis.*/
+            }
+            /* #translate::before {
+                position: absolute;
+                content: "";
+                left: -2px;
+                top: -2px;
+                z-index: -2;
+                border: 2px dashed;
+                width: 100%;
+                height: 100%;
+                transform: translate(0px , 0px);
+            } */
+            #translate:hover {
+                transform: translate(100px , 100px);
+                transition: 4s ease-in;
+            }
+            /* #translate:hover::before {
+                transform: translate(-100px , -100px);
+                transition: 4s ease-in;
+                animation-name: color-change,reset;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            #translate:not(:hover)::before {
+                transform: translate(0px , 0px);
+                transition: 4s ease-in;
+            }
+            @keyframes color-change {
+                0% {
+                    border-color: black;
+                }
+                0.1% {
+                    border-color: red;
+                }
+                100% {
+                    border-color: red;
+                }
+            } */
+            #rotate {
+                /* transform: rotate(degree); */
+                transform: rotate(0deg);
+                transition: 4s ease-in;
+                /*moves the rotates at an agle.*/
+            }
+            
+            #rotate:hover {
+                transform: rotate(45deg);
+                transition: 4s ease-in;
+            }
+
+            #scale {
+                /* transform: scale(1 = 100% enlarge); */
+                transform: scale(1);
+                transition: 2s ease-in;
+                /*enlarges the element upto a %.*/
+            }
+            
+            #scale:hover {
+                transform: scale(1.4);
+                transition: 2s ease-in;
+            }
+
+            #skew {
+                /* transform: skew(x-degree,y-degree); */
+                transform: skew(0deg,0deg);
+                transition: 2s ease-in;
+                /*changes it's x and y coordinates at given degree.*/
+            }
+            
+            #skew:hover {
+                transform: skew(20deg,20deg);
+                transition: 2s ease-in;
+            }
+        </style>
+        <div class="box" id="translate" style="margin-bottom: 10rem;">Translate</div>
+        <div class="box2" style="margin: -28.75rem auto 0 auto;"></div>
+        <div class="box" id="rotate" style="margin: 10rem auto;">Rotate</div>
+        <div class="box2" style="margin: -28.75rem auto 0 auto;"></div>
+        <div class="box" id="scale">Scale</div>
+        <div class="box2" style="margin: -25.75rem auto 0 auto;"></div>
+        <div class="box" id="skew">Skew</div>
+        <div class="box2" style="margin: -25.75rem auto 0 auto;"></div>
+    </body>
+</html>

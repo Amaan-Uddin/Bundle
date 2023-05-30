@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type casting</title>
+</head>
+<body>
+    <script>
+        /* javascript can understand if a number is given in quotation or not 
+        although it will return it's typeof() as a string.
+
+        example: age = "19";
+        this is a string variable but we can perform any arthimetic operations on this string 
+        as it only contains integers.
+
+        so, age * 2;
+        output: 38
+
+        but if there are a sequence of characters in the string then the arthmetic operations 
+        are invalid and cannot be performed
+        */
+        let a = "31";
+        // a is a stting of pure numbers/digits here
+        console.log(typeof(a));
+
+        // we can perform any arthimetic or any operations which require numbers as it's operand
+        console.log(a*7);
+        console.log(typeof(a*7));
+        // here the type of the value obtained by multiplying a pure number string with an interger
+        // is number.
+
+        // we can even perform string concatination operation since it is a string
+        console.log(a+19);
+
+        // All the Casting datatypes/variables we have in javascript
+        // Number() , parseFloat() , parseInt()
+        // string
+        // Object
+        // Array
+        // Boolean
+
+        // declare a variable of string type and change it to a number Type
+        let b = "50";
+
+        b = Number(b); // make sure to reassign the new datatype value of b to ensure 
+        // it does not stay the stay the same
+
+        console.log(typeof(b));
+        console.log(b*2);
+        // REMEMBER : you can always check if the value provied is nummber or string by
+        // working it out in the console log.
+
+
+        // now  let's check the boolean of our variable b
+        // REMEMBER: any value which is not zero is true for boolean datatypes
+        // Zero is always false
+        b = Boolean(b);
+
+        console.log(typeof(b));
+        console.log(b);
+
+        b = Boolean(0);
+        console.log(b);
+
+        
+        //The significnce of this type conversion is to allow us flexibility with numeric intputs.
+
+        //Most of the time the input recieves from the user is in string
+        let age = prompt("How old are you?");
+        console.log(age);
+        console.log(typeof(age));
+
+        // to make sure we get only a number use the Number() function/method
+
+        /*
+        age = Number(prompt("How old are you?"));
+        console.log(age);
+        console.log(typeof(age));
+        */
+
+       // let's replace one digit of a numeric string
+       age = age.replace(age[0],"3");
+       console.log(age);
+       
+    </script>
+</body>
+</html>

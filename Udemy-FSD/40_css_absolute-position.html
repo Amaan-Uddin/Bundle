@@ -1,0 +1,72 @@
+<!-- Absolute position -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Absolute Position</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            div {
+                font-size: 18pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .parent-box {
+                width: 300px;
+                height: 300px;
+                border: 5px solid black;
+                position: relative;
+                /* box-sizing: border-box;*/
+                /* make sure the parent element is relative in positioning */
+            }
+            .child-box {
+                width: 150px;
+                height: 150px;
+                border: 5px solid red;
+                position: absolute;
+                right: 0;
+                top: 0;
+                box-sizing: border-box;
+                /* this will place our cild box in the I st quadrant */
+            }
+            /*
+            Absolute positioning helps us move an element based on it's parent element ,
+            BUT the parent element has to be of relative positioning.
+            */
+            .child-box-2 {
+                width: 150px;
+                height: 150px;
+                border: 5px solid red;
+                position: absolute;
+                left: 0;
+                top: 0;
+                box-sizing: border-box;
+            }
+            .child-box-3 {
+                width: 150px;
+                height: 150px;
+                border: 5px solid red;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                box-sizing: border-box;
+            }
+            .child-box-4 {
+                width: 150px;
+                height: 150px;
+                border: 5px solid red;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                box-sizing: border-box;
+            }
+
+        </style>
+        <div class="parent-box">
+            <div class="child-box"></div>
+            <div class="child-box-2"></div>
+            <div class="child-box-3"></div>
+            <div class="child-box-4"></div>
+        </div>
+    </body>
+</html>

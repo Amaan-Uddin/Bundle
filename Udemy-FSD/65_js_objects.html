@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Opbjects</title>
+</head>
+<body>
+    <!-- let's discuss javascript objects -->
+    <script>
+        // let's define an object
+        let person = {}
+        // let's add some key:value pair to it
+        person = {
+            "name": "john",
+            "age": 31,
+            "salary": 10500.50,
+            "favFruit": ["watermelon" , "apple" , "banana"]
+        }
+        // we do not have to declare the 'let' key-word as we have already defined our person object
+        // all we're doing here is adding/inserting values to it.
+        // try accessing each key through the console node
+        // syntax: <obj_name>[<key>]
+        console.log(person["favFruit"][0]);
+    </script>
+</body>
+</html>

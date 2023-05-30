@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- in this section we will be discussing about a small topic regarding comparison
+    specifically "===" or strict comparision -->
+
+    <!-- 
+        so the basic idea behind strict comparision is to check if the 2 values being compared are 
+        exactly identical or not , ranging from its type to it's value
+     -->
+     <script>
+        //  example
+        const number = "1";
+        // now from the above line of code we can conclude that our number variable is infact of string datatype
+        // the value between the ""(quotation) is a number, a pure/vanilla integer.
+        // since it's an integer value with string datatype, we can perform arthemitic operations on it.
+
+
+        // example of arithemitic operations
+        console.log(number * 2);
+
+
+        console.log(number == 1);
+        // comparing a string-type integer with an actual integer
+        
+        // now let's use a strict comparision operator
+        console.log(number === 1);
+
+        // strict comaprisions are much faster compared to normal comparison and yeild accurate results
+     </script>
+</body>
+</html>

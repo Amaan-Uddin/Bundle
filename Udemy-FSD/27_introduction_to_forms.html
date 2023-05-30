@@ -1,0 +1,137 @@
+<!-- let's talk forms in html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            .code {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 13pt;
+                font-weight: 100;
+                text-transform: capitalize;
+            }
+            .divBorder {
+                border: 1px solid black;
+                border-radius: 3px;
+                padding: 6px ;
+                padding-block: 10px;
+            }
+            kbd {
+                background-color: rgb(53, 52, 79);
+                border-radius: 3px;
+                border: 1px solid black;
+                box-shadow: 0 1px 1px rgba(0 , 0 , 0 , .2) , 0 2px rgba(53 ,52, 79 , .7) inset;
+                color: #333;
+                display: inline-block;
+                font-size: .85em;
+                font-weight: 700;
+                line-height: 1;
+                padding: 2px 4px;
+                white-space:nowrap;
+            }
+            .input {
+                padding: 5px;width: 25%;
+                font-size: 17px;font-family: Georgia, 'Times New Roman', Times, serif;
+                border: 2px solid black; 
+                border-radius: 3px;
+                outline: none !important; /* make sure to give it an "outline:none;" when you want your input field to change the border-color.*/
+                transition: 0.1s;
+                /* transition helps us with a more asthetic view*/
+            }
+            .input:focus {  /* the :focus helps use to aply certain changes to our program once it's under focus.*/
+                border: 2px solid rgb(33, 0, 220);
+                border-radius: 3px;
+            }
+            .input:hover {  /* the :hover pseudo-class applies our new css when the mouse pointer hovers over it */
+                border-color: rgb(33, 0, 220);   
+            }
+        </style>
+        <h2>HTML 201:</h2>
+        <div class="code">
+            In this tutorial we'll be discussing about forms and all the different tags that are used in forms.
+            <div class="code">
+                First of it'll be our <b>&lt;input&gt;</b> tag:
+            </div>
+        </div>
+        <br>
+        <form action="">
+            <input  required name="email" type="email" value="Hello World" placeholder="Enter A Value.."  onfocus="this.value=''" class="input" >
+            <!-- the required aattribute will not trigger any action if the input box is left  empty or if the requirements of the "type" are not met -->
+        </form>
+        <br>
+        <div class="code">
+            What we supposidly did is that we created an <b>input field</b> or an <b>entry field</b> which has default value as "Hello World".<br>
+            The placeholder for it is "Enter A Value" which will be shown once the entry filed is empty.
+        </div>
+        <br>
+        <div class="code divBorder">
+            <div>
+                <b><strong><u>REMEMBER:</u></strong></b> By using the attribute <b><strong>"onfocus"</strong></b> we have made it so that once the input field is clicked it'll empty out the default value and display the placeholder.
+            </div>
+            <br>
+            <div>
+                the Syntax for it is, <kbd><span style="color: orange;">onfocus</span>=<span style="color: rgb(16, 131, 16);">"<span style="color: rgb(221, 221, 84);">this</span><span style="color: rgb(181, 176, 176);">.</span><span style="color: red;">value</span><span style="color: teal;">=</span>''"</span> </kbd>
+            </div>
+        </div>
+        <br>
+        <div class="code">
+            Now let's talk about the another usefull form tag, <b>&lt;textarea&gt;</b>
+        </div>
+        <br>
+        <form action="">
+            <textarea name="address" cols="60" rows="10" placeholder="Enter A Value">This right here is text-area or as some may say a text-widget.
+
+Some of the important tips to remember is that these text-areas are whitespace sensitive and will display additional white space.
+            </textarea>
+        </form>
+        <br>
+        <div class="code"> 
+            these are used stricly by the user to fill in some additional detials or to write some enquires.<br>
+            you can also use css with these as well.
+        </div>
+        <br>
+        <div class="code">
+            Now Let's discuss about <b>&lt;button&gt;</b>(s)
+            <div class="code">
+                Buttons are used in only 4 different ways in HTML, the most comman one is <b>submit</b>
+                <div class="code">
+                    Although we can technically use it in different ways or apply different algorithms to it using JS.
+                </div>
+            </div>
+        </div>
+        <br>
+        <form action="">
+            <button name="Submit-Button" type="submit" style="color:white;background-color: rgb(71, 71, 233);border-radius: 5px;border-color: rgb(71, 71, 233);border-style: solid;padding: 2px 4px;">Click me!</button>
+        </form>
+        <br>
+        <div class="code">
+            That's all it is for our buttons
+        </div>
+        <br>
+        <div class="code">
+            Now let's move on to our <b>&lt;select&gt;</b> or <b>Drop-Down-Menu</b> tags.
+            <div class="code">
+                <b>Drop-Down-Menu</b> boxes are often used to display multiple options for a particular action or function.
+                <div class="code">
+                    the user must select alteast one if <b>required<b>
+                    <div class="code" style="line-height: 1;">
+                        You can even <b>disable</b> or <b>pre-select</b> an option from the <b>Drop-Down-Menu</b> boxes.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <form action="" method="GET">
+            <select name="Selected-Option" style="opacity: 70%;">
+                <option value="" disabled style="text-align: center;">-disabled-</option>
+                <option value="value 1">displayed value 1</option>
+                <option value="value 2">displayed value 2</option>
+                <option value="value 3">displayed value 3</option>
+                <option vlaue="value 4" selected>Pre-Selected</option>
+            </select>  
+        </form>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!-- let's get started with pseudo selectors -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pseudo selectors</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+           /*REEMBER*/
+           /*CSS is object oriented when it considers classes that are re-usable and targeting 
+           to multiple elemets. */
+            .box {
+               height: 20px;
+               border: 1px solid red;
+            }
+            .box:hover {
+               background-color: grey;
+            }
+            .box:not(.this-class) {   /*this pseudo selector targets everything but the class given as parameter*/
+                background-color: blue;
+            }
+            /*we'll see how CSS is object oriented and how just chaging the orientation of a 
+            selector can have a drastic change*/
+        </style> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box this-class"></div>  <!-- this class won't have a background-color because of :not() pseudo class-->        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <br>
+        <hr>
+        <br>
+        <style>
+            .box2 {
+            height: 20px;
+            border: 1px solid red;
+            }
+
+            .box2:not(.this-class-2) {
+            background-color: blue;
+            }
+
+            .box2:hover {
+            background-color: grey;
+            }
+            /*
+            here the change isn't quite significant but is volatile,
+            just by declarind the :hover pseudo class to our .box2 class
+            after the :not() pseudo selector will now allow us to change 
+            the background color to grey , 
+            where as in the previous one where we specified the :not() pseudo selector 
+            after out :hover class doesn't change the background color.
+            */
+
+            /*
+            this is why orientation of certain class/id/pseudo class is important 
+            in CSS when dealing with elemets with similer class or in general.
+            */
+        </style> 
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2 this-class-2"></div> 
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <br>
+        <hr>
+        <br>
+        <style>
+            .box3 {
+                height: 20px;
+                border: 1px solid red;
+            }
+            
+            .box4 {  
+                background-color: yellow;
+                color: black;
+            }   
+            .box3:not(.this-one) {
+                background-color: blue;
+            }
+            .box3:hover {
+                background-color: grey;
+            }
+            /*
+            the :nth-child() pseudo class will choose the specified nth child in an array of 
+            elements with similer classes, this usefull when working on a project with multiple
+            classes having the same classes and when you want a specific element to stand out
+            from the rest.
+            */
+        </style> 
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3 this-one"></div> 
+        <div class="box3"></div>
+        <div class="box4">Hello Wolrd!</div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+        <div class="box3"></div>
+    </body>
+</html>

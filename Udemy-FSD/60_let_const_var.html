@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 'let' and 'const' are the modern day new variables.
+    
+        let: mutable and value of the variable can be re-asigned or changed
+        const: not-mutable, once declared the variable cannot be changed/overite.
+
+        let and const unlike var are heavily influenced by their scope(global/local) , i.e 
+        depends on where the variable has been defined and under whome.
+    -->
+    <script>
+        var name = "Mohammed Amaan Uddin";
+        if(name == "Mohammed Amaan Uddin"){
+            let apples = 5;
+            const height = "5'7\"";
+            // apples / let variable can be changed anywhere, even in the console tab.
+            // const remains constant as the name suggest.
+            console.log("I have",apples,"Apples");
+            
+            console.log("My name is",name);
+            // example of how the scope of var does not matter.
+        }
+        // console.log("I have ",apples," Apples");
+        // the above code statement will generate an error as the variables apples and height heavily
+        // rely on their scope and act accordingly
+        // where as var is not depending on it's scope.
+
+        
+    </script>
+</body>
+</html>

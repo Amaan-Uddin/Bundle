@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- javascript is what gives interactivity to our website,any intereaction of the client/user
+    on a web page is done with the help of javascript.
+        
+        the three ways of writing javascript is either through linking a .js file or through 
+    <script> tag. the <script> tag can be placed at the head of the HTML or the top of the body,
+    or even at the bottom of the body.
+
+        since our files runs from top to bottom it is a better option to write the script 
+    at the bottom of the body. the sole reason for it being so that to allow our javascript to execute 
+    properly for a particular html tag.
+    -->
+    <!-- let's look at a simple example of javascript -->
+    <script>
+        var name = "Amaan";
+        if(name == "Amaan"){
+            console.log("Hello World");
+            console.log("Function operation below");
+        }
+        function greeting(name){
+            return `Hello ${name}, How are you?`;
+        }
+        const greet = greeting("Amaan");
+        console.log(greet);
+    </script>
+</body>
+</html>

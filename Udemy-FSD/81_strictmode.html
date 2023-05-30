@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strict mode</title>
+</head>
+<body>
+    <script>
+        // strict mode prevent programers from writing loosely written code in JS
+        // all you need to do to enable strict mode is
+        "use strict";
+        // the above line of code is enough to enable strict mode and prevent loosely written code from being executed
+
+        // example
+        // x = "thing";
+        // now this will generate an error when executing JS because eventhough the varibale is defined it isn't declared as 'var' 'let' or 'const'
+        // but if we were to define the variable and assign a value it
+        let x = "thing";
+        console.log(x);
+        // now if we were to change the value of the variable down the road to something else it won't display an error for not defining it
+        x = "somethig else";
+        console.log(x);
+
+        // strict mode is benificial in cases where you want to make sure that there aren't any typos in your program
+        // which might hold some crucial data
+
+        // example
+        let y = "something";
+        //
+        // some logic
+        // 
+        t = "new value"; // will generate an error as "t" is not defined
+        console.log(y);
+        // now here by enabling strict mode we can easily make sure that the data isn't passed down to an varibale which wasn't defined previsouly.
+        
+    </script>
+</body>
+</html>

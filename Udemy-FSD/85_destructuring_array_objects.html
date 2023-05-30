@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring arrays and objects</title>
+</head>
+<body>
+    <script>
+        // so destructuring of an array and object is similer to unpacking of a tuple
+        // tuple = ("amaan","uddin")
+        // name,midName = tuple
+
+        // Destructuring an array
+        let months = ["january","feburary","march"];
+        const [jan,feb] = months;  // here the two variables would assign the fist two values of the array
+        // in order, meaning the first variable "jan" will hold the values january, so on...
+
+        console.log(jan,feb);
+
+        // Destructuring an object
+        let person = {
+            "name" : "Amaan",
+            "age" : 19,
+            "profession" : "student"
+        };
+
+        const {name,age} = person; // here to destructure an object we need to specify the complete name of 
+        // our object keys inorder to access their respective values
+
+        console.log(name,age);
+
+
+        // NOTE: while destructuring an array make sure you use hard-square brackects
+        // and when destructuring an object use curly brackets
+
+    </script>
+</body>
+</html>

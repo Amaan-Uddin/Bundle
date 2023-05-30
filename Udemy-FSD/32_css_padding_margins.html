@@ -1,0 +1,65 @@
+<!-- Let's discuss padding and margins-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Padding and Margins</title>
+    <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+</head>
+<body>
+    <style>
+        div {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15pt;
+        }
+        #box {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15pt;
+            line-height: 1.2;
+            width: 500px;
+            height: 200px;
+            border: 1px dashed red;
+            padding: 10px 10px 10px 10px;
+            
+        }
+        #box2 {
+            width: 500px;
+            height :200px;
+            border: 1px dashed blue;
+            /*margin: top right bottom left;*/
+            /*margin: auto; if you want to center a div  block or a block element, make sure that 
+            if you're specifing a 'position' make sure it is relative and not absolute.*/
+            margin: 10px 20px 10px 20px;
+        }
+    </style>
+    <h1>CSS:101</h1>
+    <h2 style='text-decoration: underline;'>
+        Padding:
+    </h2>
+    <div>
+        In CSS padding is an <span style='font-family: Arial, Helvetica, sans-serif; font-weight: bold;'>Internal</span> property, it is applied to block and the contents of the block are effected by it.
+        <div>
+            Padding spaces/moves the content to a specific unit/distance. 
+        </div>
+        <br>
+        <div id='box'>
+            Here's an example of padding used inside of a box.
+        </div>
+    </div>
+    <!-- Remember to use 'text-align: center;' if you want to  centre your contents rathher than increasing the padding on left or right side of the block.-->
+    <br>
+    <h2 style='text-decoration: underline;'>
+        Margin:
+    </h2>
+    <div>
+        Margin is an <span style='font-family: Arial, Helvetica, sans-serif; font-weight: bold;'>External</span> property, it is only used to apply padding on the outside of a block or element.
+        <div>
+            It works just like our "padding" property.
+        </div>
+        <br>
+        <div id='box2'>
+            Here's an example of a margin outside the box.
+        </div>
+        <!-- margin: auto; will center the  block-->
+    </div>
+</body>
+</html>

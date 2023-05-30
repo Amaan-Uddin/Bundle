@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting object property</title>
+</head>
+<body>
+    <script>
+        // in javascript we are capable of deleting the property of a particular object but we cannot delete a whole variable
+
+        // to demonstrate our thesis we are going to enable "strict mode"
+
+        // "use strict"
+
+        // let's create 2 different object with similer keys but different values
+
+        const person1 = {
+            "name" : "Amaan",
+            "age" : 19
+        }
+
+        const person2 ={
+            "name" : "Mohd",
+            "age" : 20
+        }
+
+        // Now by using our delete keyword we are able to delete a property of a object but not the entire object
+
+        delete person1["age"]
+        console.log(person1["name"],person1["age"])
+        // the above line of code should display "undefined" in our console
+
+        delete person2
+        console.log(person2)
+        // the above line of code will display an error in our console 
+        // the message displayed will be "Delete of an unqualified identifier in strict mode."
+
+        // NOTE: if we were to remove strict mode from our js file, our compiler will not compile that piece of code 
+        // and the entire object will be displayed in the console.
+
+
+    </script>
+</body>
+</html>

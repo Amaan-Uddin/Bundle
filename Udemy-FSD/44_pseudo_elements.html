@@ -1,0 +1,116 @@
+<!-- pseudo  elemets , like ::before and ::after -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pseudo Elements</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            :focus{outline: none;}
+
+            body {
+                margin: 0;
+                background-color: #19181c;
+            }
+            .container {
+                margin-top: 70px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 500px;
+                height: 500px;
+                border-radius: 20px;
+                /* position: relative; */
+                margin-top: 70px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+            }
+            .email-box {
+                border: 1px solid rgb(82, 82, 82);
+                margin-left: auto;
+                margin-right: auto;
+                top: 3rem;
+                width: 20rem;
+                height: 1.5rem;
+                padding: 5px;
+                position: relative;
+            }
+            div.email-box input[type="email"] {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1rem;
+                border: 0px;
+                width: 100%;
+                height: 100%;
+                padding: 0px;
+            }
+
+            .email-box::before,.email-box::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 0%;
+                transition: .4s ease-in;
+            }
+            .email-box:hover::after {
+                width: 100%;
+                transition: .4s ease-in;
+                border: .01px solid rgb(92, 92, 255);
+            }
+
+            .button-box {
+                position: relative;
+                top: 5rem;
+                width: 10rem;
+                height: 1rem;
+                padding: 6px;
+                margin-right: auto;
+                margin-left: auto;
+                border: 1px solid rgb(82, 82, 82);
+                border-radius: 5px;
+                z-index: 1;
+                padding-bottom: 10px;
+            }
+
+            button {
+                border: 0px;
+                width: 100%;
+                height: 100%;
+                font-size: 1rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 0px;
+                background: transparent;
+            }
+
+            .button-box::after {
+                position: absolute;
+                content: "";
+                z-index: -1;
+                width: 0%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                transition: 0.4s ease-in;
+            }
+            .button-box:hover::after {
+                width: 100%;
+                transition: .4s ease-in;
+                background-color: indianred;
+                opacity: 50%;
+                box-shadow: 0px 0px 10px indianred;
+            }
+        </style>
+        <div class="container">
+            <form action="">
+                <div class="email-box">
+                    <input type="email" name="Email" placeholder="Email@example.com">
+                </div>
+                <div class="button-box">
+                    <button>button</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!-- widths and height in a table row -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>table alteration</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+        <style>
+            table,tr,td,th {
+                border: 1px solid black;
+            }
+        </style>
+        <!-- By doing this we are creating a border for our table-->
+    </head>
+    <body>
+        <h2>HTML 201:</h2>
+        <div>
+            Let's discuss about how we could give our table elements some <b><strong>width</strong></b> and <b><strong>height</strong></b> and while we are at it let's add some <b><u>padding</u></b> to it as well.
+        </div>
+
+        <h3><span style="text-decoration: underline;">Create A Table:</span></h3>
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <th style="padding: 10px;" colspan="2">First Row</th>
+                    <!-- <th> is differenet from our usual <td> , it's a header tag which also bolden the font-->
+                    <!-- here we are using some css style attributes to add a padding of 10px from all sides-->
+                </tr>
+                <tr>
+                    <td width="50%" style="text-align:center;">second row</td>
+                    <!-- css style "text-align: center;" used to keep the text at the centre of the row/column inside our table
+                    We are using width 50% becuase when we add another column to our row and this new column contains more characters 
+                    or the length of this column is greater than the previous column the program adjusts it on its own but the result isn't quite satisfactory 
+                    as isually it isn't a perfect half so we are dynamically makin the width of the previous column 50%-->
+                    <td style="text-align:center;">second row second column</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            padding: 0; 
+            margin: 0;
+            list-style: none;
+        }
+
+        .container{
+            font-family: 'Times New Roman', Times, serif;
+            padding: 1rem;
+            border: 2px solid black;
+            width: fit-content;
+            text-align: center;
+            font-size: 1.25rem;
+
+            margin: 0 0 2rem;
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,40%);
+        }
+
+        .box{
+            width: 100%;
+            max-width: 35rem;
+            position: relative;
+            padding: 1rem;
+            border: 2px solid black;
+            width: fit-content;
+            text-align: center;
+            margin: 0 auto;
+            padding: 1rem;
+            top: 10rem;
+
+            font-size: 1.5rem;
+            display: none;
+        }
+
+        .text{
+            text-align: left;
+            font-size: 1.55rem;
+        }
+
+        #header{
+            margin-bottom: 1rem;
+        }
+
+        .list-item{
+            padding: .5rem 0;
+            background-color: aliceblue;
+            width: 20rem;            
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">Favourite Food</h1>
+        <ul class="list">
+            <li class="list-item li1">Pizza</li>
+            <li class="list-item li2">Burger</li>
+            <li class="list-item li3">Biryani</li>
+            <li class="list-item">Wraps</li>
+            <li class="list-item">Fried Chicken</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h1 class="header">
+            Random Text
+        </h1>
+
+        <p class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem placeat labore delectus accusantium, esse, iure mollitia porro corrupti et ex voluptate qui vero itaque beatae ipsam. Excepturi, rerum. Obcaecati voluptate quasi ut soluta eveniet illum. Velit blanditiis consequuntur corporis quos!
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

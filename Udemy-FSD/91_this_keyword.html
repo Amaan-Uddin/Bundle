@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'this' keyword</title>
+</head>
+<body>
+    <script>
+        // 'this' refers to the entire body of an object
+        const person = {
+            "name" : "amaan",
+            speak() {               
+                console.log("hello world")
+            }
+            // the function given above is a method of our object person
+        }
+        person.speak()
+        // so here when we execurte our program , the console will display hello world
+
+        // let's create another object and let's try and dispaly the the name of that object through our object function
+
+        const person1 = {
+            "name" : "Mohammed",
+            /* 
+            speak() {
+                console.log(`Hello Wolrd! my name is ${person["name"]}`)
+            }
+            */
+            // here is one way of dynamically inserting a name inside of our function which is a part of our OBJECT
+
+            speak() {
+                console.log(`Hello World! my name is ${this.name}`)
+            }
+        }
+        person1.speak()
+        // so here the 'this' keyword refers to an entire object it lies within, so by writing "this.name"
+        // the program displays the value of the "name" key which is part of object person1
+        // 'this' is only scoped to it's object
+
+        // 'this' keyword can also be used in a function
+        function counter(){
+            if(this.total === undefined){
+                this.total = "q"
+                // if we were to give this.total a "1" string type number , then upon the first iteration 
+                // the type of our variable will be string, later a number
+                // is we were to give a normal character string, then after the first iteration it will display the this.total as a NaN
+                // but surprisingly the type of our NaN will be number
+            } else {
+                this.total++
+            }
+            console.log("Running Counter....",this.total)
+            console.log(typeof(this.total))
+        }
+        let count = 0
+        let myInterval = setInterval(() => {
+            counter()
+            count++ 
+            if(count == 3){
+                clearInterval(myInterval)
+            }
+        },100)
+
+        // so in the above example we are checking the definiton of a variable literal in our function
+        // since the variable  is undefined , we are declaring a value to it and displaying it on our console
+        // the above process is repeated a set number of times, and on each iteration we are incrementing the value of our total variable
+
+
+        
+    </script>
+</body>
+</html>

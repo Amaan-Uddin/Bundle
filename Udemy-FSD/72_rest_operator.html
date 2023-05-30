@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest operator</title>
+</head>
+<body>    
+    <script>
+        // the rest operator allows the function to accept unlimited amount of parameters
+        function addNumbers(...numbers){
+            let total = 0;
+            for(i in numbers){
+                total += numbers[i];
+            }
+            return total;
+        }
+        // the parameter of our function with 'rest operator' is supposed to be an array or an iterable
+        const sum = addNumbers(1,2,3,4,5);
+        console.log(sum);
+
+        // let's take an example with another parameter without a rest operator 
+        function nameNumber(name,...numbers){
+            let total = 0;
+            for(i in numbers){
+                total += numbers[i];
+            }
+            return `${name}: total is ${total}`;
+        }
+        const newSum = nameNumber("Amaan",1,17,9,3);
+        console.log(newSum);
+
+        console.log("hello world");
+    </script>
+</body>
+</html>

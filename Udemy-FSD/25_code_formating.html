@@ -1,0 +1,75 @@
+<!-- Code formating-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Code Formating</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+
+    </head>
+
+    <body>
+        <style>
+            .Code {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 13pt;
+                margin: auto;
+                color: rgb(28, 26, 26);
+                border: 1px solid black;
+                text-transform: capitalize;
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+            }
+            
+            .PreCode {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: initial;
+                color: rgb(28,26,26);
+                background-color: grey;
+                border: 1px solid black;
+                text-transform: capitalize;
+                font-weight: 100;
+                margin-top: 20px;
+                text-align: center;
+                padding: 10px;
+                caret-color: red;
+            }
+        </style>
+        <!-- The "margin" attribute sets the packs up the statements inside of a element and space them out according to the "px" given-->
+        <h2>HTML 201:</h2>
+        <div>
+            In this section we'll be discussing about code formating in html.
+            <div>
+                As we are aware of the fact that our html is not "white space" sensitive and it doesn't include the additional white spaces between 2 characters.
+                <div>
+                    So to add additional white space we use the <span style="font-weight: bold;">&lt;br&gt;</span> or &<span style="font-weight: bold;">nbsp</span>;
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+            But there are other ways of doing this and that is through the use of <span style="font-weight:bold;">&lt;pre&gt;</span> tag.
+            <div>
+                This tag <b>IS</b> "white-space" sensitive and will add the additional white space between 2 Characters.
+            </div>
+        </div>
+        <br>
+        <div>
+            Since it's a differnet tag the font for it also quite different, Example...
+        </div>
+        <br>
+        <pre style="text-align: center;margin-left: 20px;margin-right: 40px;">
+        The Statement Written Here Is Under The &lt;pre&gt; Tag. Notice How The Font For This Different From What Is Usual.
+    Example: Hi My Name Is Amaan Uddin   And    This Shows How The &lt;pre&gt; IS White-Space Sensitive.
+        </pre>
+
+        <div class="Code">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla necessitatibus dolorem suscipit. Quibusdam dolorem eos sunt voluptate neque, unde expedita, error modi, assumenda quisquam repudiandae iste provident rerum vel blanditiis.
+        </div>
+
+        <pre class="PreCode">
+            just like how we can add CSS to our <b>&lt;div&gt;</b> tag , we can also add CSS to our &lt;pre&gt; tags as well
+            but they will have to be written in a specific manner or else it might/will exceed the boundaries.</pre> 
+
+    </body>
+</html>

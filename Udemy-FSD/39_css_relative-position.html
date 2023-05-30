@@ -1,0 +1,36 @@
+<!-- relative positions in  css -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Relative Position</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            div {
+                font-size: 18pt;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .box {
+                border: 5px solid black;
+                width: 300px;
+                height: 300px;
+            }
+            /*
+            so relative posiotioning is used when you want to slightly move it in either direction.
+            it's main use is when we have positioning for child elements like absolute.
+            */
+            #position-applied {
+                position: relative;
+                top: 50px;
+                left: 50px;
+            }
+        </style>
+        <div class="box" style="border-color: red;display: inline-block;">
+            <div class="box" id="position-applied"></div>
+        </div>   
+
+        <!-- the above div element displays how the relative positioning works -->
+           
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object with function</title>
+</head>
+<body>
+    <!-- here we'll be looking at object with function inside of them as a value to a key -->
+    <script>
+        const person = {
+            "name": "amaan",
+            "age": 19,
+            "profession": "student",
+            "speak":function(want="cookies"){
+                console.log(`hello world and ${want}`);
+            },
+            talk(){
+                console.log("I'am talking");
+            }
+        }
+        // so we have a standard object here but this time with a fucntion as it's value
+        // to access such function we use the '.' operator just like we use it to access any other operators
+        person.speak();
+
+        // another way would be through simply inserting a function in the key section of an object
+        // this is called an "object literal"
+        person.talk();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1699 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;600&display=swap');
+
+/* website theme */
+:root{
+    --hue-1: 257;
+    --hue-2: 47;
+    --main-color-1: hsl(var(--hue-1),100%,60%);
+    --main-color-dark-1: hsl(var(--hue-1),69%,50%);
+    --main-color-2: hsl(var(--hue-2),100%,61%);
+    --main-color-dark-2: hsl(var(--hue-2),82%,55%);
+    --section-padding: 7rem;
+}
+
+
+/* General styles */
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{ 
+    --bg-color: hsl(var(--hue-1),100%,97%);  
+    --bg-color-1: hsl(var(--hue-1),100%,95.5%);
+    --bg-color-2: #fff;
+    --bg-color-3: hsl(var(--hue-1),100%,98%);
+    --bg-color-transparent: rgba(255,255,255,0.6);
+    --heading-color: hsl(var(--hue-1),61%,24%);
+    --text-color: hsl(var(--hue-1),17%,63%);
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+body.dark{
+    --bg-color: hsl(var(--hue-1),19%,15%);
+    --bg-color-1: hsl(var(--hue-1),21%,11%);
+    --bg-color-2: hsl(var(--hue-1),23%,19%);
+    --bg-color-3: hsl(var(--hue-1),23%,24%);
+    --bg-color-transparent: hsla(var(--hue-1),23%,19%,.6);
+    --heading-color: hsl(var(--hue-1),100%,95%);
+    --text-color: hsl(var(--hue-1),14%,51%);   
+}
+
+body.dark .nav-link:hover::after,
+body.dark .nav-link.active::after{
+    opacity: .6;
+}
+
+body.dark .form-input:hover{
+    filter: brightness(110%);
+}
+
+/* 
+body.dark .icon{
+    filter: invert(1);
+} */
+/* the above code is the most simplest way of changing the black icons to white icon */
+
+
+body{
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    font-family: "Poppins",sans-serif;
+    transition: .3s background-color;
+}
+
+body.stop-scrolling{
+    height: 100%;
+    overflow: hidden;
+}
+/* the above styling would makes it so that it looks like the background has frozen up */
+
+::selection{
+    background-color: hsla(var(--hue-1),100%,60%,0.9);
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* --------------------------Reusabel CSS-------------------------- */
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+.logo{
+    margin-right: 1.5rem;
+    font-family: "Abril Fatface",cursive;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    letter-spacing: 1px;
+    transition: .3s;
+}
+.logo span{
+    color: var(--main-color-1);
+}
+
+.sub-heading {
+    color: var(--heading-color);
+    font-size: .85rem;
+    text-transform: uppercase;
+    padding: .13rem .75rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+    border-left: 3px solid var(--main-color-2);
+    transition: .3s;
+}
+
+.heading{
+    font-size: 3rem;
+    color: var(--heading-color);
+    font-family: "Abril Fatface",cursive;
+    font-weight: 400;
+    line-height: 1.3;
+    transition: .3s;
+}
+
+.text {
+    color: var(--text-color);
+    font-size: .9rem;
+    margin: 2rem 0;
+    line-height: 2.3;
+    transition: .3s;
+}
+.section{
+    position: relative;
+    padding: 7rem 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: .9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: .85rem;
+    letter-spacing: .4px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .3s;
+    /* min-width: 125px; */
+}
+.btn:hover{
+    background-color: var(--main-color-dark-1);
+}
+
+.btn.secondary-btn{
+    position: relative;
+    background-color: transparent;
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: 0px;
+    border-bottom: 2.5px solid var(--main-color-2);
+    border-radius: 0px;
+    padding: .15rem 0;
+    transition: .3s;
+    min-width: revert;
+}
+.btn.secondary-btn::before{
+    content: "";
+    position: absolute;
+    bottom: -2.5px;
+    left: 0;
+    height: 2.5px;
+    width: 0;
+    transition: .3s ease-in-out;
+    background-color: var(--main-color-dark-1);
+}
+.btn.secondary-btn:hover::before{
+    width: 100%;
+    transition: .3s;
+}
+
+.btn.btn.secondary-btn.sm{
+    padding: .07rem .1rem;
+    font-size: .78rem;
+    border-bottom-width: 2px;
+}
+
+.btn.btn.secondary-btn.sm::before{
+    height: 2px;
+    bottom: -2px;
+}
+
+.form-input{
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    background-color: var(--bg-color-3);
+    border: 2px solid var(--bg-color-3);
+    width: 100%;
+    border-radius: 17px;
+    margin-bottom: 1.5rem;
+    font-family: inherit;
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    outline: none;
+    transition: .3s;
+}
+
+.form-input:hover{
+    filter: brightness(97%);
+}
+
+.form-input:focus,
+.form-input:valid{
+    filter: brightness(100%);
+    background-color: var(--bg-color-1);
+    border-color: var(--main-color-1);
+}
+/* the valid pseudo class will allow us to keep the CSS style on the input field till it has a valid value */
+
+.form-input::placeholder{
+    color: var(--text-color);
+}
+
+
+
+/* --------------------------nav-bar styling-------------------------- */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: .3s;
+}
+
+header.scrolled{
+    background-color: var(--bg-color-transparent);
+    box-shadow: 0 5px 20px 0.1px rgba(0,0,0,.1);
+    backdrop-filter: blur(15px);
+}
+header.scrolled .logo{
+    height: 80px;
+    line-height: 80px;
+}
+nav.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .logo{
+    height: 120px;
+    line-height: 120px;
+}
+.links{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.links ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.nav-link{
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: .5px;
+    color: var(--text-color);
+    font-weight: 500;
+    opacity: .9;
+    transition: .3s;
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--main-color-1);
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s;
+}
+.nav-link:hover::after, .nav-link.active::after{
+    width: 100%;
+    opacity: 0.2;
+    transition: .3s;
+}
+.nav-link:hover,.nav-link.active{
+    color: var(--heading-color);
+}
+
+.toggle-btn{
+    color: var(--heading-color);
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: var(--bg-color-2);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    transition: .3s;
+    margin-right: 2rem;
+}
+.toggle-btn:hover{
+    filter: brightness(97%);
+}
+
+.hamburger{
+    display: none;
+    padding: 1rem 0;
+    height: 12px;
+    width: 25px;
+    box-sizing: content-box;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger .bar{
+    width: 100%;
+    height: 2px;
+    background-color: var(--heading-color);
+    border-radius: 3px;
+    position: absolute;
+}
+
+.hamburger .bar:first-child{
+    top: 1rem;
+    transition: top .2s .15s, transform .3s;
+}
+.hamburger .bar:last-child{
+    bottom: 1rem;
+    transition: bottom .2s .15s, transform .3s;
+}
+
+body.open .hamburger .bar:first-child{
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: top .2s,transform .3s .1s;
+}
+body.open .hamburger .bar:last-child{
+    bottom: 50%;
+    transform: translateY(50%) rotate(45deg);
+    transition: bottom .2s,transform .3s .1s;
+}
+
+
+/* --------------------------Showcase Area Styling-------------------------- */
+.showcase-info{
+    padding-top: 3rem;
+}
+.showcase-area {
+    padding: 139px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.showcase-area .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* we are creating a grid layout so that 1 will be comprised with our showcase-info
+    other being our showcase-image */
+
+    /*height: calc(100vh - 120px); /* this decleration right here will make it so that the showcase area 
+    takes up the entire viewport area */
+    height: 440px;
+    /* by specifying the max-height, the showcase-area cannot excede it's bounds */
+    align-items: center;
+}
+
+.showcase-area .sub-heading{
+    margin-bottom: .7rem;
+}
+
+.showcase-area .heading {
+    font-size: 3.5rem;
+}
+
+.showcase-area .text{
+    margin: .8rem 0;
+}
+
+.cta{
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cta .btn{
+    margin-right: 1.5rem;
+}
+
+.showcase-image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* margin-top: -46rem; */
+    margin-top: -15rem;
+    background-image: linear-gradient(135deg , var(--main-color-1) 53% , var(--main-color-2) 53%);
+    border-radius: 0 0 80px 80px;
+    width: 100%;
+    /* height: 70rem */
+    height: 42rem;
+}
+
+/* --------------------------About section styling-------------------------- */
+
+.about .container{
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+}
+
+.about .text{
+    margin: 3rem 0 4rem;
+}
+
+.about-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 190px 190px;
+    grid-template-rows: 190px 190px;
+    justify-content: center;
+    column-gap: 2.5rem;
+    row-gap: 50px;
+    margin-right: 2rem;
+}
+.about-card{
+    background-color: var(--bg-color-2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s transform, .3s background-color;
+}
+.about-card:nth-child(1){
+    border-radius: 40px 40px 5px 40px;
+}
+.about-card:nth-child(2){
+    margin-top: 50px;
+    border-radius: 40px 40px 40px 5px;
+}
+.about-card:nth-child(3){
+    border-radius: 40px 5px 40px 40px;
+}
+.about-card:nth-child(4){
+    margin-top: 50px;
+    border-radius: 5px 40px 40px 40px;
+}
+.icon {
+    width: 64px;
+    transition: .3s;
+}
+
+.about-card h3{
+    color: var(--heading-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    letter-spacing: .3px;
+}
+.about-card:hover{
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.about-grid::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 15px solid var(--main-color-1);
+    width: 210px;
+    height: 210px;
+    z-index: -1;
+    opacity: .07;
+}
+
+/* -------------------------- skills section styling -------------------------- */
+
+.skills {
+    overflow: hidden;
+    transition: .3s;
+}
+
+.skills-box{
+    background-color: var(--bg-color-2);
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+    transition: .3s background-color;
+}
+
+.box-desc{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.skills-wrap{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sk-progress{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.sk-progress svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+
+}
+
+.sk-progress svg circle{
+    fill: var(--bg-color-3);
+    stroke-width: 5px;
+    stroke: var(--main-color-1);
+    stroke-dasharray: 427;
+    /* 
+    the dasharray property is similer to dashed-border and the greater the value of stroke-dasharray
+    the greater will be the distance between each dash.
+
+    upon stroke-dasharray: 427; it completely covers the cirmcumference of our circle.
+    */
+    stroke-dashoffset: 426;
+    /* 
+    the dashoffset value will decease the dasharray and on either 0 we recive our origional stroke.
+
+    stroke-dashoffset: 426 would reflect the status of zero progress;
+    */
+    stroke-linecap: round;
+
+    /* now we can implement javascript to showcase the value between 0 - 427 depending upon the percentage provided */
+
+    transition: .3s;
+}
+
+@keyframes progress {
+    to{
+        stroke-dashoffset: var(--target);
+    }
+}
+
+
+.counter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--heading-color);
+    font-weight: 400;
+    font-size: .9rem;
+    z-index: 1;
+    transition: .3s color;
+}
+
+.counter span{
+    font-size: 2rem;
+}
+
+.sk-title{
+    color: var(--heading-color);
+    margin-top: .75rem;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: .3s color;
+}
+.hire.btn {
+    width: 8rem;
+    text-align: center;
+}
+
+/* --------------------------services styling----------------------- */
+
+/* .services.section{
+    margin-top: 0;
+} */
+
+.services .container{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    column-gap: 6rem;
+    align-items: center;
+}
+
+.milestone{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    align-items: center;
+    justify-items: flex-start;
+    text-align: center;
+}
+.milestone h2{
+    color: var(--main-color-1);
+    font-size: 1.3rem;
+    transition: .3s color;
+}
+
+.milestone h2 span{
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-right: 0.1rem;
+}
+
+.milestone h5{
+    color: var(--heading-color);
+    line-height: .9;
+    font-weight: 500;
+    font-size: .95rem;
+}
+
+.services-grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    column-gap: 2rem;
+    row-gap: 4.4rem;
+    /* justify-content: center; */
+}
+
+.srv-card{
+    background-color: var(--bg-color-2);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 2.5rem 2.1rem;
+    min-height: 280px;
+    transition: .3s background-color;
+}
+
+.srv-card h3{
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+.srv-card .text{
+    margin: .7rem 0;
+    font-size: .7rem;
+}
+
+.srv-card:nth-child(2){
+    transform: translateY(2.2rem);
+}
+.srv-card:nth-child(3){
+    transform: translateY(-2.2rem);
+}
+.services-grid::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 15px solid var(--main-color-1);
+    width: 210px;
+    height: 210px;
+    z-index: -1;
+    opacity: .07;
+}
+
+
+/* ------------------------------Portfolio section styling------------------------------ */
+
+.portfolio-header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.portfolio-title{
+    padding-bottom: 1rem;
+}
+
+.filter-btn{
+    display: inline-block;
+    color: var(--heading-color);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    transition: .3s color;
+}
+
+.filter-btn.mixitup-control-active{
+    color: var(--main-color-1);
+}
+
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 2rem; 
+}
+
+.prt-image img{
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    /* an important proprty to use if you want ALL of your images to be of the same size as the others */
+    /* NOTE: always specify the width of the images or else this property won't work  */
+
+    object-fit: cover;
+    /* object fit is a great property to use alongside aspect-ratio , this will crop the images and prevent stretching of images */
+}
+
+.prt-card{
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bg-color-2);
+    height: 265px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    transition: .3s background-color;
+}
+.prt-image img::selection{
+    background-color: transparent;
+}
+.prt-image{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.prt-desc{
+    padding: 1.1rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prt-desc h3{
+    font-size: .95rem;
+    color: var(--heading-color);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.prt-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.prt-icon{
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    margin: 0 0.4rem;
+    border-radius: 50% ;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.prt-image:hover .prt-overlay{  
+    /* here certain CSS will be applied to .prt-icon when the user hovers over the .prt-image*/
+    background-color: var(--bg-color-transparent);
+    backdrop-filter: blur(3px);
+    pointer-events: auto;
+    transition: .5s;
+}
+
+.prt-image:hover .prt-icon{
+    opacity: 1;
+    transition: .3s var(--i);
+    transform: translateY(0px);
+}
+
+.prt-icon:hover{
+    background-color: var(--main-color-dark-2);
+}
+
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 11;
+    pointer-events: none;
+}
+
+.modal-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.85);
+    opacity: 0;
+}
+
+.slider-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 400px));
+    width: 75%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    align-items: center;
+    justify-items: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+.slider-wrap img{
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+}
+
+.slider-wrap img::selection{
+    background-color: transparent;
+}
+
+.slider-wrap img.showImage{
+    display: block;
+}
+
+.navigation{
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.portfolio.open .modal{
+    pointer-events: auto;
+}
+
+.portfolio.open .modal-overlay{
+    opacity: 1;
+}
+
+.portfolio .container{
+    transition: .5s;
+}
+.portfolio.open .container{
+    transform: scale(.9);
+}
+
+.portfolio.open .slider-wrap{
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+
+/* ----------------------------------Testmonial section styling-------------------------- */
+
+.testimonials{
+    overflow: hidden;
+    padding: var(--section-padding) 0 calc(var(--section-padding) + 120px);
+}
+
+.testimonials .container{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+}
+
+.testimonials .swiper{ 
+    width: 100%;
+    background-color: var(--bg-color-2);
+    border-radius: 15px;
+    padding: 4rem 0 2.5rem;
+    transition: .3s background-color;
+}
+
+.swiper-slide{
+    padding: 0 2.5rem;
+}
+
+div.swiper-pagination{
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11px;
+    margin-top: 3rem;
+}
+
+span.swiper-pagination-bullet{
+    background-color: var(--main-color-1);
+    opacity: .3;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+}
+
+span.swiper-pagination-bullet-active{
+    opacity: 1;
+    width: 11px;
+    height: 11px;
+}
+
+.client{
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    /* here 85px is for the image of the client and 1fr is for the client info */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.client img{
+    width: 100%;
+}
+
+.client-info h4{
+    font-weight: 500;
+    color: var(--heading-color);
+    margin-bottom: .3rem;
+    font-size: 1.05rem;
+}
+
+.client-info h5{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.client-info a{
+    color: var(--main-color-1);
+}
+
+.swiper-slide .text{
+    display: block;
+    margin: 1.5rem 0;
+}
+
+.testimonials-title{
+    padding-left: 5rem;
+}
+
+.testimonials-title > *{
+    color: #fff;
+}
+
+.section-background{
+    position: absolute;
+    width: 100vw;
+    max-width: 75rem;
+    height: calc(100% + 120px);
+    top: 15px;
+    left: 50%;
+    transform: translateX(calc(-50% + 120px));
+    background-color: var(--main-color-1);
+    background-image: linear-gradient(45deg,var(--main-color-2)21%,var(--main-color-1)20%);
+    z-index: -1;
+    border-bottom-left-radius: 60px;
+}
+/* NOTE: our section background class is an absolute background of our relative container
+since the relative container is a grid in this instance we can state that the height of our background 
+-section is in accordance with our .reviews and .testimonial-title */
+
+/* ----------------------------------contact section styling-------------------------------------- */
+
+.contact .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+}
+
+.mail{
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.mail i{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 2px;
+    transform: translateY(3px);
+    transition: .3s margin-left;
+}
+
+.mail:hover{
+    color: var(--main-color-dark-1);
+}
+
+.mail:hover i{
+    margin-left: 10px;
+}
+
+.contact-form{
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    transition: .3s background-color;
+}
+
+.contact-form h3{
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+    line-height: .9;
+    transition: .3s color;
+}
+
+textarea.form-input{
+    resize: none;
+    min-height: 170px;
+}
+
+input[type = "submit"]{
+    font-family: inherit;
+}
+
+/* .contact-form .form-input{
+    margin-bottom: 1.5rem;
+} */
+
+
+/* ------------------------------------subscription styling----------------------------------------- */
+
+.subscription{
+    overflow: hidden;
+}
+
+.sub-box{
+    background-color: var(--bg-color-2);
+    padding: 5rem;
+    width: 100%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
+    align-items: center;
+    transition: .3s background-color;
+}
+.sub-box .heading{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.sub-box form{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1rem;
+}
+
+.sub-box form input[type="email"]{
+    /* max-height: 3.298rem;
+    padding: .9rem 1.5rem; */
+    margin-bottom: 0;
+}
+
+.subscription .map{
+    position: absolute;
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: .45;
+}
+
+
+footer {
+    padding: 4rem 0;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .social-media{
+    display: flex;
+}
+
+.social-link{
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--bg-color-2);
+    border-radius: 50%;
+    margin-left: 1rem;
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s, .3s background-color;
+}
+
+.social-link:hover{
+    color: var(--main-color-1);
+}
+
+
+
+
+/* ---------------------------------1000px Screens--------------------------------------- */
+
+@media (max-width: 1024px){
+    .sub-heading{
+        font-size: .75rem;
+    }
+    .heading{
+        font-size: 2rem;
+    }
+
+    .showcase-area .heading{
+        font-size: 2.7rem;
+    }
+
+    .text{
+        font-size: .84rem;
+        margin: 1.3rem 0;
+    }
+
+    .btn{
+        padding: .8rem 1.6rem;
+        font-size: .8rem;
+        min-width: 100px;
+        border-radius: 15px;
+    }
+
+    .btn.secondary-btn{
+        font-size: .85rem;
+    }
+
+    .form-input{
+        padding: .8rem 1.45rem;
+        border-radius: 15px;
+        font-size: .8rem;
+    }
+
+    .logo{
+        font-size: 1.45rem;
+    }
+
+    header .logo{
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .nav-link{
+        font-size: .7rem;
+    }
+
+    .showcase-area{
+        padding: 100px 0;
+    }
+
+    .showcase-area .container{
+        grid-template-columns: 1fr 430px;
+        height: 432px;
+    }
+
+    .about-grid{
+        grid-template-columns: 170px 170px;
+        grid-template-rows: 170px 170px;
+    }
+    .icon{
+        width: 56px;
+    }
+    .about-card h3{
+        font-size: .8rem;
+    }
+
+    .skills-box{
+        padding: 4rem;
+    }
+
+    .sk-progress{
+        transform: scale(.85);
+    }
+
+    .services .container{
+        column-gap: 2.5rem;
+    }
+
+    .contact .container{
+        column-gap: 2.5rem;
+    }
+
+    .contact-form{
+        padding: 2.5rem 2rem;
+    }
+
+    .contact-form h3{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact .form-input{
+        margin-bottom: .8rem;
+    }
+
+    .sub-box{
+        padding: 3.5rem 2.5rem;
+        column-gap: 2rem;
+    }
+
+    .filter-btn{
+        font-size: .7rem;
+    }
+
+    .prt-desc h3{
+        font-size: .78rem;
+    }
+}
+
+
+/* ---------------------------------768px Screens--------------------------------------- */
+
+@media (max-width: 768px){
+    :root{
+        --section-padding: 4.5rem;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    /* header{
+        background-color: var(--bg-color-2);
+    } */
+
+    header nav{
+        justify-content: space-between;
+    }
+
+    .links{
+        order: 3;
+        flex-basis: 100%; /*width: 100%;*/
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem 0 2rem;
+    }
+
+    .links ul{
+        position: relative;
+        flex-direction: column;
+    }
+
+    .nav-link{
+        margin: 1.5rem 0;
+        color: var(--heading-color);
+        font-weight: 500;
+    }
+
+    .toggle-btn{
+        margin: 0;
+    }
+
+    .links ul::after{
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: .5px;
+        background-color: var(--heading-color);
+        opacity: 0;
+        top: -.5rem;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: .3s;
+    }
+
+    .overlay{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: 6;
+        opacity: 0;
+        transition: .3s;
+        pointer-events: none;
+        /* NOTE: since this piece of element is an overlay and it takes up the entire viewport while being transparent
+        we need to specify it's pointer-event to "none" , otherwise our user will not be able to access the contents of our page
+        due to their event being blocked by a transparent wall */
+    }
+
+    header{
+        height: 505px;
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    header.scrolled{
+        height: 485;
+        max-height: 80px;
+    }
+
+    body.open header{
+        max-height: 505px;
+        background-color: var(--bg-color-2);
+    }
+
+    body.open header.scrolled{
+        max-height: 485px;
+        background-color: var(--bg-color-transparent);
+    }
+
+    body.open .overlay{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    body.open .links ul::after{
+        width: 100%;
+        opacity: .7;
+    }
+
+    body.open .links{
+        opacity: 1;
+    }
+
+    .showcase-area .container{
+        grid-template-columns: 1fr;
+        height: revert;
+        justify-items: center;
+        row-gap: 4rem;
+    }
+
+    .showcase-image{
+        min-height: revert;
+        height: 100vw;
+        max-height: 570px;
+        max-width: 450px;
+        margin-top: 0;
+        border-radius: 40px;
+    }
+
+    .showcase-area .text{
+        margin: .2rem 0;
+    }
+
+    .cta{
+        margin-top: 1.6rem;
+    }
+
+    .showcase-info{
+        margin-top: 1rem;
+    }
+
+    .about .container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 4rem;
+    }
+    .about .heading br{
+        display: none;
+    }
+    .about .text{
+        margin: 1rem 0 1.5rem;
+    }
+
+    .about-grid{
+        margin-right: 0px;
+    }
+
+    .box-desc{
+        grid-template-columns: 1fr ;
+        justify-items: flex-start;
+    }
+
+    .skills-wrap{
+        grid-template-columns: repeat(2,150px);
+        justify-content: space-between;
+    }
+    .sk-title{
+        margin-top: 0;
+    }
+
+    .services .container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .services .text{
+        margin: 1.5rem 0 0.5rem;
+    }
+
+    .services-grid{
+        margin-top: 3.5rem;
+        column-gap: 1.5rem;
+        row-gap: 3.5rem;
+        max-width: 600px;
+    }
+
+    .srv-card{
+        padding: 1.8rem 1.7rem;
+        min-height: 260px;
+    }
+
+    .srv-card h3{
+        font-size: .9rem;
+    }
+
+    .srv-card .text{
+        margin: .4rem 0 .8rem;
+    }
+
+    .portfolio-title{
+        padding-bottom: 0;
+    }
+
+    .testimonials{
+        padding: var(--section-padding) 0;
+    }
+    .testimonials .container{
+        position: revert;
+        grid-template-columns: 1fr;
+        max-width: 620px;
+    }
+
+    .section-background{
+        transform: translateX(0);
+        left: 0;
+        border-radius: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    .swiper{
+        order: 2;
+        padding: 2rem 0;
+    }
+
+    .testimonials-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 0 3rem 0;
+    }
+
+    .swiper-slide{
+        padding: 0 2rem;
+    }
+
+    .swiper-slide .text{
+        margin: 1rem;
+    }
+
+    .swiper-pagination{
+        margin-top: 3rem;
+    }
+
+    .client{
+        grid-template-columns: 65px 1fr;
+    }
+
+    .client-info h4{
+        margin-bottom: .2rem;
+        font-size: .97rem;
+    }
+
+    .client-info h5{
+        font-size: .7rem;
+    }
+
+    .contact .container{
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    .sub-box{
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .sub .heading{
+        margin-top: 0rem;
+    }
+}
+
+@media (max-width: 500px){
+    .container{
+        padding: 0 1rem;
+    }
+
+    .showcase-area .container{
+        row-gap: 4.5rem;
+    }
+
+    .showcase-area .heading{
+        font-size: 2.4rem;
+    }
+
+    .skills-box{
+        padding: 3rem 2.5rem;
+    }
+
+    .skills-wrap{
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+    }
+
+    .services-grid{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .srv-card{
+        transform: none !important;
+        min-height: auto;
+    }
+
+    .portfolio-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portfolio-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn{
+        margin-top: 1rem;
+    }
+
+    .portfolio .slider-wrap{
+        width: calc((100% - 2rem));
+        grid-template-columns: 50px 1fr 50px;
+    }
+
+    .images{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .prev-btn{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        z-index: 1;
+        color: #333;
+    }
+
+    .next-btn{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        z-index: 1;
+        color: #333;
+    }
+
+    .contact-form p{
+        font-size: 1.2rem;
+    }
+
+    .subscription form{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        justify-items: center;
+    }
+
+    .sub-box{
+        padding: 3rem 2.2rem;
+        row-gap: .5rem;
+    }
+
+    .sub-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sub-box .heading{
+        font-size: 1.7rem;
+    }
+
+    footer{
+        padding: var(--section-padding) 0 1rem;
+    }
+
+    footer .text{
+        order: 1;
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 400px){
+    .about-grid{
+        grid-template-columns: 140px 140px;
+        grid-template-rows: 140px 140px;
+    }
+    .icon{
+        width: 50px;
+    }
+
+    .about-card:nth-child(1){
+        border-radius: 30px 30px 5px 30px;
+    }
+    .about-card:nth-child(2){
+        margin-top: 30px;
+        border-radius: 30px 30px 30px 5px;
+    }
+    .about-card:nth-child(3){
+        border-radius: 30px 5px 30px 30px;
+    }
+    .about-card:nth-child(4){
+        margin-top: 30px;
+        border-radius: 5px 30px 30px 30px;
+    }
+
+    .about-grid{ 
+        row-gap: 30px;
+        column-gap: 1.75rem;
+    }
+
+    .about-grid::before{
+        width: 170px;
+        height: 170px;
+    }
+    .about-card h3{
+        font-size: .7rem;
+    }
+}
+
+@media (max-width:320px){
+    .about-grid{
+        grid-template-columns: 120px 120px;
+        grid-template-rows: 120px 120px;
+    }
+    .icon{
+        width: 40px;
+    }
+}

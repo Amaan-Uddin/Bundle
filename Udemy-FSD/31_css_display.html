@@ -1,0 +1,99 @@
+<!-- let's learn about display in CSS-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display</title>
+        <link rel="shortcut icon" href="C:\Users\user\Desktop\Amaan's folder\Other-html-5-icon.png" type="image/png">
+    </head>
+    <body>
+        <style>
+            div {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 13pt;
+                font-weight: 100;
+            }
+            kbd {
+                border-radius: 5px;
+                box-shadow: none;
+                background-color: rgb(208, 197, 197);
+                border: 1px solid black;
+                display: inline-block;
+                font-weight: 700;
+                line-height: 1.2;
+                padding: 2px 4px;
+                text-transform: none;
+                box-shadow: 2px 2px 5px  rgb(75, 72, 72);/* add  'inset' if you want to apply the box shadow inside*/
+            }
+        </style>
+        <h1>
+            CSS:101
+        </h1>
+        <h2>
+            Display
+        </h2>
+        <div>
+            In this section we'll be learning more about <strong><b>inline</b></strong> and <strong><b>block</b></strong> elements, specifically about how we can overwrite these elements.
+            <br><br>
+            <div>
+                As we are aware of our <kbd>&lt;div&gt;</kbd> element being a block element, another example would be <kbd>&lt;h1&gt;</kbd> elements. 
+                <div>
+                    If we were to write some code on the same line a block element , it'll force the program to display the other code on the next line and the block element will take up the entire block.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="font-size: 15pt;font-weight: bold; line-height: 1.3;">Example:</div>
+        <div>
+            <kbd style="border-radius: 4px;line-height: 1.3;">
+                &lt;h1&gt;Hello&lt;/h1&gt;world.<br>
+                &lt;span&gt;welcome to the world of front-end engineering.&lt;/span&gt; How are you ?
+            </kbd>
+            <br>
+            <br>
+            <span style="line-height: 1.3; font-weight: bold; font-size: 15pt;">Result:</span>
+            <br>
+            <kbd style="border-radius: 4px;line-height: 1.3;">
+                <h1>Hello</h1> world.
+                <span>welcome to the world of front-end engineering.</span> How are you ?
+            </kbd>
+        </div>
+        <br>
+        <div>
+            to prevent this from happening we can overite the <strong><b>display</b></strong> property of the a block element.
+        </div>
+        <br>
+        <div>
+            <span style="font-weight: bold; font-size: 15pt;line-height: 1.2;">
+                CSS:
+            </span>
+            <br>
+            <kbd>
+                div {<br>
+                &nbsp;&nbsp;&nbsp;display : inline;<br>
+                &nbsp;&nbsp;&nbsp;border : 1px red;<br>
+                }
+            </kbd>
+            <br>
+            <br>
+            <kbd>
+                &lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;This is block 1<br>
+                &lt;/div&gt;<br>
+                <br>
+                &lt;div&gt;<br>
+                &nbsp;&nbsp;&nbsp;This is block 2<br>
+                &lt;/div&gt;<br>
+            </kbd>
+            <br>
+            <br>
+            <span style="font-weight:bold;line-height: 1.3;font-size:15pt;">
+                Result:
+            </span>
+            <br>
+            <kbd style='padding: 13px;'>
+                <div style="display: inline;border:1px solid red;padding: 3px;">This is block 1</div>
+                <div style="display: inline;border: 1px solid red;padding: 3px;">This is block 2</div>
+            </kbd>
+        </div>
+    </body>
+</html>
